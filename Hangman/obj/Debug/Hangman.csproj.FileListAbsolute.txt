@@ -8,3 +8,14 @@ D:\programming\visual studio\GUI\C#\Hangman\Hangman\obj\Debug\Hangman.csproj.Gen
 D:\programming\visual studio\GUI\C#\Hangman\Hangman\obj\Debug\Hangman.exe
 D:\programming\visual studio\GUI\C#\Hangman\Hangman\obj\Debug\Hangman.pdb
 D:\programming\visual studio\GUI\C#\Hangman\Hangman\bin\Debug\Hangman.pdb
+D:\projects\Hangman\Hangman\Hangman\bin\Debug\Hangman.exe.config
+D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.exe
+D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.pdb
+D:\projects\Hangman\Hangman\Hangman\bin\Debug\Hangman.exe
+D:\projects\Hangman\Hangman\Hangman\bin\Debug\Hangman.pdb
+D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
+D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.Game_Form.resources
+D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.Keyboard.resources
+D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.Properties.Resources.resources
+D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.Start_Form.resources
+D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
