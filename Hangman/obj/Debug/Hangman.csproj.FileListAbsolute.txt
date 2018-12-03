@@ -17,5 +17,5 @@ D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.csprojResolveAssemblyRefer
 D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.Game_Form.resources
 D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.Keyboard.resources
 D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.Properties.Resources.resources
-D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.Start_Form.resources
 D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
+D:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.InterfaceForm.resources

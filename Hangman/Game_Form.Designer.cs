@@ -38,9 +38,24 @@
             this.ra2s = new System.Windows.Forms.Panel();
             this.def_txt = new System.Windows.Forms.Label();
             this.hint_txt = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Word_lbl = new System.Windows.Forms.Label();
+            this.GamingOptions_panel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Play_btn = new System.Windows.Forms.Button();
+            this.esy_btn = new System.Windows.Forms.Button();
+            this.med_btn = new System.Windows.Forms.Button();
+            this.hard_btn = new System.Windows.Forms.Button();
+            this.Category_cb = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Category_lbl = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Random_rb = new System.Windows.Forms.RadioButton();
+            this.ByCategory_rb = new System.Windows.Forms.RadioButton();
             this.keyboard1 = new Hangman.Keyboard();
+            this.Quit_btn = new System.Windows.Forms.Button();
             this.masn2a.SuspendLayout();
+            this.GamingOptions_panel.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // masn2a
@@ -133,15 +148,149 @@
             this.hint_txt.TabIndex = 2;
             this.hint_txt.Text = "this is the hint text";
             // 
-            // label1
+            // Word_lbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(283, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "- - - - - -";
+            this.Word_lbl.AutoSize = true;
+            this.Word_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Word_lbl.Location = new System.Drawing.Point(283, 75);
+            this.Word_lbl.Name = "Word_lbl";
+            this.Word_lbl.Size = new System.Drawing.Size(115, 33);
+            this.Word_lbl.TabIndex = 0;
+            this.Word_lbl.Text = "- - - - - -";
+            // 
+            // GamingOptions_panel
+            // 
+            this.GamingOptions_panel.Controls.Add(this.label4);
+            this.GamingOptions_panel.Controls.Add(this.Play_btn);
+            this.GamingOptions_panel.Controls.Add(this.esy_btn);
+            this.GamingOptions_panel.Controls.Add(this.med_btn);
+            this.GamingOptions_panel.Controls.Add(this.hard_btn);
+            this.GamingOptions_panel.Controls.Add(this.Category_cb);
+            this.GamingOptions_panel.Controls.Add(this.label3);
+            this.GamingOptions_panel.Controls.Add(this.Category_lbl);
+            this.GamingOptions_panel.Controls.Add(this.groupBox2);
+            this.GamingOptions_panel.Location = new System.Drawing.Point(12, 12);
+            this.GamingOptions_panel.Name = "GamingOptions_panel";
+            this.GamingOptions_panel.Size = new System.Drawing.Size(660, 437);
+            this.GamingOptions_panel.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(249, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Choose Level";
+            // 
+            // Play_btn
+            // 
+            this.Play_btn.Location = new System.Drawing.Point(497, 16);
+            this.Play_btn.Name = "Play_btn";
+            this.Play_btn.Size = new System.Drawing.Size(130, 55);
+            this.Play_btn.TabIndex = 16;
+            this.Play_btn.Text = "Play";
+            this.Play_btn.UseVisualStyleBackColor = true;
+            this.Play_btn.Click += new System.EventHandler(this.Play_btn_Click);
+            // 
+            // esy_btn
+            // 
+            this.esy_btn.Location = new System.Drawing.Point(195, 257);
+            this.esy_btn.Name = "esy_btn";
+            this.esy_btn.Size = new System.Drawing.Size(176, 55);
+            this.esy_btn.TabIndex = 15;
+            this.esy_btn.Text = "Easy";
+            this.esy_btn.UseVisualStyleBackColor = true;
+            this.esy_btn.Click += new System.EventHandler(this.esy_btn_Click);
+            // 
+            // med_btn
+            // 
+            this.med_btn.Location = new System.Drawing.Point(195, 184);
+            this.med_btn.Name = "med_btn";
+            this.med_btn.Size = new System.Drawing.Size(176, 55);
+            this.med_btn.TabIndex = 14;
+            this.med_btn.Text = "Medium";
+            this.med_btn.UseVisualStyleBackColor = true;
+            this.med_btn.Click += new System.EventHandler(this.med_btn_Click);
+            // 
+            // hard_btn
+            // 
+            this.hard_btn.Location = new System.Drawing.Point(195, 112);
+            this.hard_btn.Name = "hard_btn";
+            this.hard_btn.Size = new System.Drawing.Size(176, 55);
+            this.hard_btn.TabIndex = 13;
+            this.hard_btn.Text = "Hard";
+            this.hard_btn.UseVisualStyleBackColor = true;
+            this.hard_btn.Click += new System.EventHandler(this.hard_btn_Click);
+            // 
+            // Category_cb
+            // 
+            this.Category_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Category_cb.FormattingEnabled = true;
+            this.Category_cb.Items.AddRange(new object[] {
+            "History",
+            "Geography",
+            "Animals",
+            "Movies",
+            "Science",
+            "Sports"});
+            this.Category_cb.Location = new System.Drawing.Point(236, 369);
+            this.Category_cb.Name = "Category_cb";
+            this.Category_cb.Size = new System.Drawing.Size(121, 21);
+            this.Category_cb.TabIndex = 12;
+            this.Category_cb.SelectedIndexChanged += new System.EventHandler(this.Category_cb_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(121, 341);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Select words mode:";
+            // 
+            // Category_lbl
+            // 
+            this.Category_lbl.AutoSize = true;
+            this.Category_lbl.Location = new System.Drawing.Point(145, 372);
+            this.Category_lbl.Name = "Category_lbl";
+            this.Category_lbl.Size = new System.Drawing.Size(85, 13);
+            this.Category_lbl.TabIndex = 11;
+            this.Category_lbl.Text = "Select Category:";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.Random_rb);
+            this.groupBox2.Controls.Add(this.ByCategory_rb);
+            this.groupBox2.Location = new System.Drawing.Point(226, 322);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 45);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            // 
+            // Random_rb
+            // 
+            this.Random_rb.AutoSize = true;
+            this.Random_rb.Location = new System.Drawing.Point(6, 19);
+            this.Random_rb.Name = "Random_rb";
+            this.Random_rb.Size = new System.Drawing.Size(65, 17);
+            this.Random_rb.TabIndex = 5;
+            this.Random_rb.TabStop = true;
+            this.Random_rb.Text = "Random";
+            this.Random_rb.UseVisualStyleBackColor = true;
+            this.Random_rb.CheckedChanged += new System.EventHandler(this.Random_rb_CheckedChanged);
+            // 
+            // ByCategory_rb
+            // 
+            this.ByCategory_rb.AutoSize = true;
+            this.ByCategory_rb.Location = new System.Drawing.Point(84, 19);
+            this.ByCategory_rb.Name = "ByCategory_rb";
+            this.ByCategory_rb.Size = new System.Drawing.Size(81, 17);
+            this.ByCategory_rb.TabIndex = 6;
+            this.ByCategory_rb.TabStop = true;
+            this.ByCategory_rb.Text = "By category";
+            this.ByCategory_rb.UseVisualStyleBackColor = true;
+            this.ByCategory_rb.CheckedChanged += new System.EventHandler(this.ByCategory_rb_CheckedChanged);
             // 
             // keyboard1
             // 
@@ -151,20 +300,38 @@
             this.keyboard1.Size = new System.Drawing.Size(253, 229);
             this.keyboard1.TabIndex = 0;
             // 
+            // Quit_btn
+            // 
+            this.Quit_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Quit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Quit_btn.Location = new System.Drawing.Point(575, 12);
+            this.Quit_btn.Name = "Quit_btn";
+            this.Quit_btn.Size = new System.Drawing.Size(97, 42);
+            this.Quit_btn.TabIndex = 15;
+            this.Quit_btn.Text = "Quit";
+            this.Quit_btn.UseVisualStyleBackColor = true;
+            this.Quit_btn.Click += new System.EventHandler(this.Quit_btn_Click);
+            // 
             // Game_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.GamingOptions_panel);
             this.Controls.Add(this.hint_txt);
             this.Controls.Add(this.keyboard1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Word_lbl);
             this.Controls.Add(this.def_txt);
             this.Controls.Add(this.masn2a);
+            this.Controls.Add(this.Quit_btn);
             this.Name = "Game_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
             this.masn2a.ResumeLayout(false);
+            this.GamingOptions_panel.ResumeLayout(false);
+            this.GamingOptions_panel.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,12 +343,25 @@
         private System.Windows.Forms.Panel masn2a;
         private System.Windows.Forms.Label def_txt;
         private System.Windows.Forms.Label hint_txt;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Word_lbl;
         private System.Windows.Forms.Panel regl_shemal;
         private System.Windows.Forms.Panel Eed_shemal;
         private System.Windows.Forms.Panel regl_ymeen;
         private System.Windows.Forms.Panel Eed_ymeen;
         private System.Windows.Forms.Panel gesm;
         private System.Windows.Forms.Panel ra2s;
+        private System.Windows.Forms.Panel GamingOptions_panel;
+        private System.Windows.Forms.ComboBox Category_cb;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Category_lbl;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton Random_rb;
+        private System.Windows.Forms.RadioButton ByCategory_rb;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Play_btn;
+        private System.Windows.Forms.Button esy_btn;
+        private System.Windows.Forms.Button med_btn;
+        private System.Windows.Forms.Button hard_btn;
+        private System.Windows.Forms.Button Quit_btn;
     }
 }
