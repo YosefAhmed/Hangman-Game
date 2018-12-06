@@ -52,14 +52,13 @@
             this.V = new System.Windows.Forms.Button();
             this.w = new System.Windows.Forms.Button();
             this.X = new System.Windows.Forms.Button();
-            this.Y = new System.Windows.Forms.Button();    
+            this.Y = new System.Windows.Forms.Button();
             this.Z = new System.Windows.Forms.Button();
-            
-            
             this.SuspendLayout();
             // 
             // A
             // 
+            this.A.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.A.Location = new System.Drawing.Point(7, 6);
             this.A.Name = "A";
             this.A.Size = new System.Drawing.Size(43, 31);
@@ -67,26 +66,39 @@
             this.A.Text = "A";
             this.A.UseVisualStyleBackColor = true;
             // 
-            // Q
+            // B
             // 
-            this.Q.Location = new System.Drawing.Point(56, 117);
-            this.Q.Name = "Q";
-            this.Q.Size = new System.Drawing.Size(43, 31);
-            this.Q.TabIndex = 10;
-            this.Q.Text = "Q";
-            this.Q.UseVisualStyleBackColor = true;
+            this.B.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.B.Location = new System.Drawing.Point(56, 6);
+            this.B.Name = "B";
+            this.B.Size = new System.Drawing.Size(43, 31);
+            this.B.TabIndex = 1;
+            this.B.Text = "B";
+            this.B.UseVisualStyleBackColor = true;
             // 
-            // w
+            // C
             // 
-            this.w.Location = new System.Drawing.Point(105, 154);
-            this.w.Name = "w";
-            this.w.Size = new System.Drawing.Size(43, 31);
-            this.w.TabIndex = 2;
-            this.w.Text = "W";
-            this.w.UseVisualStyleBackColor = true;
+            this.C.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.C.Location = new System.Drawing.Point(105, 6);
+            this.C.Name = "C";
+            this.C.Size = new System.Drawing.Size(43, 31);
+            this.C.TabIndex = 1;
+            this.C.Text = "C";
+            this.C.UseVisualStyleBackColor = true;
+            // 
+            // D
+            // 
+            this.D.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.D.Location = new System.Drawing.Point(154, 6);
+            this.D.Name = "D";
+            this.D.Size = new System.Drawing.Size(43, 31);
+            this.D.TabIndex = 3;
+            this.D.Text = "D";
+            this.D.UseVisualStyleBackColor = true;
             // 
             // E
             // 
+            this.E.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.E.Location = new System.Drawing.Point(203, 6);
             this.E.Name = "E";
             this.E.Size = new System.Drawing.Size(43, 31);
@@ -94,90 +106,9 @@
             this.E.Text = "E";
             this.E.UseVisualStyleBackColor = true;
             // 
-            // R
-            // 
-            this.R.Location = new System.Drawing.Point(105, 117);
-            this.R.Name = "R";
-            this.R.Size = new System.Drawing.Size(43, 31);
-            this.R.TabIndex = 2;
-            this.R.Text = "R";
-            this.R.UseVisualStyleBackColor = true;
-            // 
-            // T
-            // 
-            this.T.Location = new System.Drawing.Point(203, 117);
-            this.T.Name = "T";
-            this.T.Size = new System.Drawing.Size(43, 31);
-            this.T.TabIndex = 2;
-            this.T.Text = "T";
-            this.T.UseVisualStyleBackColor = true;
-            // 
-            // Y
-            // 
-            this.Y.Location = new System.Drawing.Point(203, 154);
-            this.Y.Name = "Y";
-            this.Y.Size = new System.Drawing.Size(43, 31);
-            this.Y.TabIndex = 2;
-            this.Y.Text = "Y";
-            this.Y.UseVisualStyleBackColor = true;
-            // 
-            // U
-            // 
-            this.U.Location = new System.Drawing.Point(7, 154);
-            this.U.Name = "U";
-            this.U.Size = new System.Drawing.Size(43, 31);
-            this.U.TabIndex = 2;
-            this.U.Text = "U";
-            this.U.UseVisualStyleBackColor = true;
-            // 
-            // I
-            // 
-            this.I.Location = new System.Drawing.Point(154, 43);
-            this.I.Name = "I";
-            this.I.Size = new System.Drawing.Size(43, 31);
-            this.I.TabIndex = 2;
-            this.I.Text = "I";
-            this.I.UseVisualStyleBackColor = true;
-            // 
-            // O
-            // 
-            this.O.Location = new System.Drawing.Point(203, 80);
-            this.O.Name = "O";
-            this.O.Size = new System.Drawing.Size(43, 31);
-            this.O.TabIndex = 2;
-            this.O.Text = "O";
-            this.O.UseVisualStyleBackColor = true;
-            // 
-            // P
-            // 
-            this.P.Location = new System.Drawing.Point(7, 117);
-            this.P.Name = "P";
-            this.P.Size = new System.Drawing.Size(43, 31);
-            this.P.TabIndex = 2;
-            this.P.Text = "P";
-            this.P.UseVisualStyleBackColor = true;
-            // 
-       
-            // S
-            // 
-            this.S.Location = new System.Drawing.Point(154, 117);
-            this.S.Name = "S";
-            this.S.Size = new System.Drawing.Size(43, 31);
-            this.S.TabIndex = 2;
-            this.S.Text = "S";
-            this.S.UseVisualStyleBackColor = true;
-            // 
-            // D
-            // 
-            this.D.Location = new System.Drawing.Point(154, 6);
-            this.D.Name = "D";
-            this.D.Size = new System.Drawing.Size(43, 31);
-            this.C.TabIndex = 2;
-            this.D.Text = "D";
-            this.D.UseVisualStyleBackColor = true;
-            // 
             // F
             // 
+            this.F.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.F.Location = new System.Drawing.Point(7, 43);
             this.F.Name = "F";
             this.F.Size = new System.Drawing.Size(43, 31);
@@ -187,6 +118,7 @@
             // 
             // G
             // 
+            this.G.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.G.Location = new System.Drawing.Point(56, 43);
             this.G.Name = "G";
             this.G.Size = new System.Drawing.Size(43, 31);
@@ -196,6 +128,7 @@
             // 
             // H
             // 
+            this.H.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.H.Location = new System.Drawing.Point(105, 43);
             this.H.Name = "H";
             this.H.Size = new System.Drawing.Size(43, 31);
@@ -203,8 +136,19 @@
             this.H.Text = "H";
             this.H.UseVisualStyleBackColor = true;
             // 
+            // I
+            // 
+            this.I.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.I.Location = new System.Drawing.Point(154, 43);
+            this.I.Name = "I";
+            this.I.Size = new System.Drawing.Size(43, 31);
+            this.I.TabIndex = 2;
+            this.I.Text = "I";
+            this.I.UseVisualStyleBackColor = true;
+            // 
             // J
             // 
+            this.J.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.J.Location = new System.Drawing.Point(203, 43);
             this.J.Name = "J";
             this.J.Size = new System.Drawing.Size(43, 31);
@@ -214,6 +158,7 @@
             // 
             // K
             // 
+            this.K.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.K.Location = new System.Drawing.Point(7, 80);
             this.K.Name = "K";
             this.K.Size = new System.Drawing.Size(43, 31);
@@ -223,6 +168,7 @@
             // 
             // L
             // 
+            this.L.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.L.Location = new System.Drawing.Point(56, 80);
             this.L.Name = "L";
             this.L.Size = new System.Drawing.Size(43, 31);
@@ -230,53 +176,19 @@
             this.L.Text = "L";
             this.L.UseVisualStyleBackColor = true;
             // 
-            // Z
+            // M
             // 
-            this.Z.Location = new System.Drawing.Point(105, 191);
-            this.Z.Name = "Z";
-            this.Z.Size = new System.Drawing.Size(43, 31);
-            this.Z.TabIndex = 2;
-            this.Z.Text = "Z";
-            this.Z.UseVisualStyleBackColor = true;
-            // 
-            // X
-            // 
-            this.X.Location = new System.Drawing.Point(154, 154);
-            this.X.Name = "X";
-            this.X.Size = new System.Drawing.Size(43, 31);
-            this.X.TabIndex = 2;
-            this.X.Text = "X";
-            this.X.UseVisualStyleBackColor = true;
-            // 
-            // C
-            // 
-            this.C.Location = new System.Drawing.Point(105, 6);
-            this.C.Name = "C";
-            this.C.Size = new System.Drawing.Size(43, 31);
-            this.C.TabIndex = 1;
-            this.C.Text = "C";
-            this.C.UseVisualStyleBackColor = true;
-            // 
-            // V
-            // 
-            this.V.Location = new System.Drawing.Point(56, 154);
-            this.V.Name = "V";
-            this.V.Size = new System.Drawing.Size(43, 31);
-            this.V.TabIndex = 2;
-            this.V.Text = "V";
-            this.V.UseVisualStyleBackColor = true;
-            // 
-            // B
-            // 
-            this.B.Location = new System.Drawing.Point(56, 6);
-            this.B.Name = "B";
-            this.B.Size = new System.Drawing.Size(43, 31);
-            this.B.TabIndex = 1;
-            this.B.Text = "B";
-            this.B.UseVisualStyleBackColor = true;
+            this.M.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.M.Location = new System.Drawing.Point(105, 80);
+            this.M.Name = "M";
+            this.M.Size = new System.Drawing.Size(43, 31);
+            this.M.TabIndex = 2;
+            this.M.Text = "M";
+            this.M.UseVisualStyleBackColor = true;
             // 
             // N
             // 
+            this.N.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.N.Location = new System.Drawing.Point(154, 80);
             this.N.Name = "N";
             this.N.Size = new System.Drawing.Size(43, 31);
@@ -284,14 +196,125 @@
             this.N.Text = "N";
             this.N.UseVisualStyleBackColor = true;
             // 
-            // M
+            // O
             // 
-            this.M.Location = new System.Drawing.Point(105, 80);
-            this.M.Name = "M";
-            this.M.Size = new System.Drawing.Size(43, 31);
-            this.M.TabIndex = 2;
-            this.M.Text = "M";
-            this.M.UseVisualStyleBackColor = true;
+            this.O.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.O.Location = new System.Drawing.Point(203, 80);
+            this.O.Name = "O";
+            this.O.Size = new System.Drawing.Size(43, 31);
+            this.O.TabIndex = 2;
+            this.O.Text = "O";
+            this.O.UseVisualStyleBackColor = true;
+            // 
+            // P
+            // 
+            this.P.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.P.Location = new System.Drawing.Point(7, 117);
+            this.P.Name = "P";
+            this.P.Size = new System.Drawing.Size(43, 31);
+            this.P.TabIndex = 2;
+            this.P.Text = "P";
+            this.P.UseVisualStyleBackColor = true;
+            // 
+            // Q
+            // 
+            this.Q.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Q.Location = new System.Drawing.Point(56, 117);
+            this.Q.Name = "Q";
+            this.Q.Size = new System.Drawing.Size(43, 31);
+            this.Q.TabIndex = 10;
+            this.Q.Text = "Q";
+            this.Q.UseVisualStyleBackColor = true;
+            // 
+            // R
+            // 
+            this.R.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.R.Location = new System.Drawing.Point(105, 117);
+            this.R.Name = "R";
+            this.R.Size = new System.Drawing.Size(43, 31);
+            this.R.TabIndex = 2;
+            this.R.Text = "R";
+            this.R.UseVisualStyleBackColor = true;
+            // 
+            // S
+            // 
+            this.S.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.S.Location = new System.Drawing.Point(154, 117);
+            this.S.Name = "S";
+            this.S.Size = new System.Drawing.Size(43, 31);
+            this.S.TabIndex = 2;
+            this.S.Text = "S";
+            this.S.UseVisualStyleBackColor = true;
+            // 
+            // T
+            // 
+            this.T.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.T.Location = new System.Drawing.Point(203, 117);
+            this.T.Name = "T";
+            this.T.Size = new System.Drawing.Size(43, 31);
+            this.T.TabIndex = 2;
+            this.T.Text = "T";
+            this.T.UseVisualStyleBackColor = true;
+            // 
+            // U
+            // 
+            this.U.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.U.Location = new System.Drawing.Point(7, 154);
+            this.U.Name = "U";
+            this.U.Size = new System.Drawing.Size(43, 31);
+            this.U.TabIndex = 2;
+            this.U.Text = "U";
+            this.U.UseVisualStyleBackColor = true;
+            // 
+            // V
+            // 
+            this.V.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.V.Location = new System.Drawing.Point(56, 154);
+            this.V.Name = "V";
+            this.V.Size = new System.Drawing.Size(43, 31);
+            this.V.TabIndex = 2;
+            this.V.Text = "V";
+            this.V.UseVisualStyleBackColor = true;
+            // 
+            // w
+            // 
+            this.w.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.w.Location = new System.Drawing.Point(105, 154);
+            this.w.Name = "w";
+            this.w.Size = new System.Drawing.Size(43, 31);
+            this.w.TabIndex = 2;
+            this.w.Text = "W";
+            this.w.UseVisualStyleBackColor = true;
+            // 
+            // X
+            // 
+            this.X.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.X.Location = new System.Drawing.Point(154, 154);
+            this.X.Name = "X";
+            this.X.Size = new System.Drawing.Size(43, 31);
+            this.X.TabIndex = 2;
+            this.X.Text = "X";
+            this.X.UseVisualStyleBackColor = true;
+            // 
+            // Y
+            // 
+            this.Y.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Y.Location = new System.Drawing.Point(203, 154);
+            this.Y.Name = "Y";
+            this.Y.Size = new System.Drawing.Size(43, 31);
+            this.Y.TabIndex = 2;
+            this.Y.Text = "Y";
+            this.Y.UseVisualStyleBackColor = true;
+            // 
+            // Z
+            // 
+            this.Z.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Z.Location = new System.Drawing.Point(105, 191);
+            this.Z.Name = "Z";
+            this.Z.Size = new System.Drawing.Size(43, 31);
+            this.Z.TabIndex = 2;
+            this.Z.Text = "Z";
+            this.Z.UseVisualStyleBackColor = true;
             // 
             // Keyboard
             // 

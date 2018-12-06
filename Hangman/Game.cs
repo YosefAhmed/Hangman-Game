@@ -20,13 +20,19 @@ namespace Hangman
         //CURRENT GAME DATA
         public string word;
         public string game_mode;
-        public string words_mode;
+        public string words_mode; 
         public string category;
-
+        public Game()//this is a constructor
+        {
+           this.words_mode="Random";
+           this.game_mode ="Medium";
+           this.category = "History";
+        }
         //This function generates a word to guess
         public string Generate_Word()
         {
             //GENERATING RANDOMLY
+            
             if (words_mode == "Random")
             {
                 if (game_mode == "Easy")
