@@ -127,7 +127,6 @@ namespace Hangman
 
         private void Quit_btn_Click(object sender, EventArgs e)
         {
-            //GamingOptions_panel
             resetControls();
             GamingOptions_panel.Show();
         }

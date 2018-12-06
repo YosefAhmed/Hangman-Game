@@ -201,6 +201,7 @@
             // Category_cb
             // 
             this.Category_cb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Category_cb.Hide();
             this.Category_cb.CausesValidation = false;
             this.Category_cb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Category_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -231,6 +232,7 @@
             // Category_lbl
             // 
             this.Category_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Category_lbl.Hide();
             this.Category_lbl.AutoSize = true;
             this.Category_lbl.Location = new System.Drawing.Point(33, 52);
             this.Category_lbl.Name = "Category_lbl";
