@@ -22,6 +22,7 @@ namespace Hangman
         public string game_mode;
         public string words_mode; 
         public string category;
+        public string hint,defenotion;
         public Game()//this is a constructor
         {
            this.words_mode="Random";
@@ -274,10 +275,84 @@ namespace Hangman
             string guessing_word = w;
             for(int i=0;i<w.Length;i++)
             {
-               guessing_word = guessing_word.Replace(w[i], '-'); //Replacing letters with dashes in the string
+                if (w[i]==' ')
+                    guessing_word = guessing_word.Replace(w[i], ' ');
+                else
+                    guessing_word = guessing_word.Replace(w[i], '-'); //Replacing letters with dashes in the string
             }
             return guessing_word;
         }
+        //This function recieves the hint of the word
+        public string Hint()
+        {
+            if(game_mode=="Easy")
+            {
+               cmd = new SqlCommand("select Hint from Easy where Word='" + word + "'",con);
+               con.Open();
+               sdr = cmd.ExecuteReader();
+               while (sdr.Read())
+                   hint = sdr["Hint"].ToString();
+               sdr.Close();
+               con.Close();
+               
+            }
+            if (game_mode == "Medium")
+            {
+                cmd = new SqlCommand("select Hint from Medium where Word='" + word + "'",con);
+                con.Open();
+                sdr = cmd.ExecuteReader();
+                while (sdr.Read())
+                    hint = sdr["Hint"].ToString();
+                sdr.Close();
+                con.Close();
+            }
+            if (game_mode == "Hard")
+            {
+                cmd = new SqlCommand("select Hint from Hard where Word='" + word + "'",con);
+                con.Open();
+                sdr = cmd.ExecuteReader();
+                while (sdr.Read())
+                    hint = sdr["Hint"].ToString();
+                sdr.Close();
+                con.Close();
+            }
+            return hint;
+        }
+        //This function recieves the defenition of the word
+        public string def()
+        {
+            if (game_mode == "Easy")
+            {
+                cmd = new SqlCommand("select Definition from Easy where Word='" + word + "'", con);
+                con.Open();
+                sdr = cmd.ExecuteReader();
+                while (sdr.Read())
+                    defenotion = sdr["Definition"].ToString();
+                sdr.Close();
+                con.Close();
 
+            }
+            if (game_mode == "Medium")
+            {
+                cmd = new SqlCommand("select Definition from Medium where Word='" + word + "'", con);
+                con.Open();
+                sdr = cmd.ExecuteReader();
+                while (sdr.Read())
+                    defenotion = sdr["Definition"].ToString();
+                sdr.Close();
+                con.Close();
+            }
+            if (game_mode == "Hard")
+            {
+                cmd = new SqlCommand("select Definition from Hard where Word='" + word + "'", con);
+                con.Open();
+                sdr = cmd.ExecuteReader();
+                while (sdr.Read())
+                    defenotion = sdr["Definition"].ToString();
+                sdr.Close();
+                con.Close();
+            }
+            return defenotion;
+        }
     }
 }

@@ -15,6 +15,9 @@ namespace Hangman
         public Game_Form()
         {
             InitializeComponent();
+            Category_cb.Hide();
+            Category_lbl.Hide();
+            Category_cb.Text = "History";
         }
         //for maxmize
         public void appearanceMax()
@@ -44,6 +47,24 @@ namespace Hangman
         public void appearanceNormal()
         {
             GamingOptions_panel.Size = new Size(660, 437);
+            Play_btn.Size = new Size(130, 55);
+            Play_btn.Location = new Point(486, 25);
+            choos_lbl.Location = new Point(249, 79);
+            hard_btn.Size = new Size(176, 55);
+            hard_btn.Location = new Point(195, 112);
+            med_btn.Size = new Size(176, 55);
+            med_btn.Location = new Point(195, 184);
+            esy_btn.Size = new Size(176, 55);
+            esy_btn.Location = new Point(195, 257);
+            category_pnl.Location = new Point(112, 320);
+
+            Quit_btn.Size = new Size(115, 53);
+            Quit_btn.Location = new Point(557, 12);
+            keyboard1.Location = new Point(12, 132);
+            masn2a.Size = new Size(198, 251);
+            masn2a.Location = new Point(444, 125);
+            def_txt.Location = new Point(139, 25);
+            hint_txt.Location = new Point(262, 416);
         }
         private void resetControls() //resets controls in GamingOptions_panel when quit button is pressed
         {
@@ -58,6 +79,8 @@ namespace Hangman
             g.words_mode = "Random";
             Category_lbl.Hide();
             Category_cb.Hide();
+            hint_txt.Text = "Give me a hint";
+
         }
         Game g = new Game();
 
@@ -66,6 +89,7 @@ namespace Hangman
             try
             {
                 string generated_Word = g.Generate_Word();
+                def_txt.Text= g.def();
                 Word_lbl.Text = g.CreatDashes(generated_Word);
                 GamingOptions_panel.Hide();
             }
@@ -148,6 +172,11 @@ namespace Hangman
                 appearanceMax();
                 i = 1;
             }
+        }
+
+        private void hint_txt_Click(object sender, EventArgs e)
+        {
+           hint_txt.Text= g.Hint();
         }
     }
 }

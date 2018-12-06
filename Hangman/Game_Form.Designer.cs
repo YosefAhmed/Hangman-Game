@@ -145,22 +145,23 @@
             this.def_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.def_txt.Location = new System.Drawing.Point(139, 25);
             this.def_txt.Name = "def_txt";
-            this.def_txt.Size = new System.Drawing.Size(596, 20);
+            this.def_txt.Size = new System.Drawing.Size(124, 20);
             this.def_txt.TabIndex = 0;
-            this.def_txt.Text = " is a dimensionless quantity representing the amount of matter in a particle or o" +
-    "bject";
+            this.def_txt.Text = "definition is here";
             // 
             // hint_txt
             // 
             this.hint_txt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.hint_txt.AutoSize = true;
+            this.hint_txt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hint_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hint_txt.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.hint_txt.Location = new System.Drawing.Point(262, 416);
             this.hint_txt.Name = "hint_txt";
-            this.hint_txt.Size = new System.Drawing.Size(596, 20);
+            this.hint_txt.Size = new System.Drawing.Size(110, 20);
             this.hint_txt.TabIndex = 2;
-            this.hint_txt.Text = " is a dimensionless quantity representing the amount of matter in a particle or o" +
-    "bject";
+            this.hint_txt.Text = "Give me a hint";
+            this.hint_txt.Click += new System.EventHandler(this.hint_txt_Click);
             // 
             // Word_lbl
             // 
@@ -201,7 +202,6 @@
             // Category_cb
             // 
             this.Category_cb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Category_cb.Hide();
             this.Category_cb.CausesValidation = false;
             this.Category_cb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Category_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -232,7 +232,6 @@
             // Category_lbl
             // 
             this.Category_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Category_lbl.Hide();
             this.Category_lbl.AutoSize = true;
             this.Category_lbl.Location = new System.Drawing.Point(33, 52);
             this.Category_lbl.Name = "Category_lbl";
@@ -369,7 +368,6 @@
             this.Controls.Add(this.def_txt);
             this.Controls.Add(this.masn2a);
             this.Controls.Add(this.Quit_btn);
-            this.MaximizeBox = false;
             this.Name = "Game_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
