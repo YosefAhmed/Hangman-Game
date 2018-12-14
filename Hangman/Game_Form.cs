@@ -7,72 +7,85 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Hangman
 {
     public partial class Game_Form : Form
     {
+        ArrayList worng_keys = new ArrayList();
+        Game g = new Game();
+        Game.DATA gd = new Game.DATA();
         public Game_Form()
         {
+            
             InitializeComponent();
             Category_cb.Hide();
             Category_lbl.Hide();
-            Category_cb.Text = "History";
+            Quit_btn.Hide();
+            trials_lbl.Hide();
+            label1.Hide();
+            Category_lbltxt.Hide();
+            Category_lblgame.Hide();
         }
-        //for maxmize
-        public void appearanceMax()
-        {
-            GamingOptions_panel.Size = new Size(1366, 650);
-            Play_btn.Size = new Size(190, 70);
-            Play_btn.Location = new Point(1100, 25);
-            choos_lbl.Location = new Point(660, 70);
-            hard_btn.Size = new Size(400, 100);
-            hard_btn.Location = new Point(500,112 );
-            med_btn.Size = new Size(400, 100);
-            med_btn.Location = new Point(500, 262);
-            esy_btn.Size = new Size(400, 100);
-            esy_btn.Location = new Point(500, 412);
-            category_pnl.Location = new Point(530, 530);
 
-            Quit_btn.Size = new Size(150, 70);
-            Quit_btn.Location = new Point(1200, 25);
-           // keyboard1.Size = new Size(350, 330);
-            keyboard1.Location = new Point(280, 280);
-            masn2a.Size = new Size(450, 400);
-            masn2a.Location = new Point(800, 150);
-            def_txt.Location = new Point(350, 80);
-            hint_txt.Location = new Point(350, 600);
-        }
-        //for Normal
-        public void appearanceNormal()
-        {
-            GamingOptions_panel.Size = new Size(660, 437);
-            Play_btn.Size = new Size(130, 55);
-            Play_btn.Location = new Point(486, 25);
-            choos_lbl.Location = new Point(249, 79);
-            hard_btn.Size = new Size(176, 55);
-            hard_btn.Location = new Point(195, 112);
-            med_btn.Size = new Size(176, 55);
-            med_btn.Location = new Point(195, 184);
-            esy_btn.Size = new Size(176, 55);
-            esy_btn.Location = new Point(195, 257);
-            category_pnl.Location = new Point(112, 320);
+        ////for maxmize
+        //public void appearanceMax()
+        //{
+        //    GamingOptions_panel.Size = new Size(1366, 650);
+        //    Play_btn.Size = new Size(190, 70);
+        //    Play_btn.Location = new Point(1100, 25);
+        //    choos_lbl.Location = new Point(660, 70);
+        //    hard_btn.Size = new Size(400, 100);
+        //    hard_btn.Location = new Point(500,112 );
+        //    med_btn.Size = new Size(400, 100);
+        //    med_btn.Location = new Point(500, 262);
+        //    esy_btn.Size = new Size(400, 100);
+        //    esy_btn.Location = new Point(500, 412);
+        //    category_pnl.Location = new Point(530, 530);
 
-            Quit_btn.Size = new Size(115, 53);
-            Quit_btn.Location = new Point(557, 12);
-            keyboard1.Location = new Point(12, 132);
-            masn2a.Size = new Size(198, 251);
-            masn2a.Location = new Point(444, 125);
-            def_txt.Location = new Point(139, 25);
-            hint_txt.Location = new Point(262, 416);
-        }
+        //    Quit_btn.Size = new Size(150, 70);
+        //    Quit_btn.Location = new Point(1200, 25);
+        //   // keyboard1.Size = new Size(350, 330);
+        //    //keyboard1.Location = new Point(280, 280);
+        //    masn2a.Size = new Size(450, 400);
+        //    masn2a.Location = new Point(800, 150);
+        //    def_txt.Location = new Point(350, 80);
+        //    hint_txt.Location = new Point(350, 600);
+        //}
+        ////for Normal
+        //public void appearanceNormal()
+        //{
+        //    GamingOptions_panel.Size = new Size(660, 437);
+        //    Play_btn.Size = new Size(130, 55);
+        //    Play_btn.Location = new Point(486, 25);
+        //    choos_lbl.Location = new Point(249, 79);
+        //    hard_btn.Size = new Size(176, 55);
+        //    hard_btn.Location = new Point(195, 112);
+        //    med_btn.Size = new Size(176, 55);
+        //    med_btn.Location = new Point(195, 184);
+        //    esy_btn.Size = new Size(176, 55);
+        //    esy_btn.Location = new Point(195, 257);
+        //    category_pnl.Location = new Point(112, 320);
+
+        //    Quit_btn.Size = new Size(115, 53);
+        //    Quit_btn.Location = new Point(557, 12);
+        //    //keyboard1.Location = new Point(12, 132);
+        //    masn2a.Size = new Size(198, 251);
+        //    masn2a.Location = new Point(444, 125);
+        //    def_txt.Location = new Point(139, 25);
+        //    hint_txt.Location = new Point(262, 416);
+        //}
         private void resetControls() //resets controls in GamingOptions_panel when quit button is pressed
         {
-           // resetControls game level
+            Game.score = 0;
+            label2.Text = Game.score.ToString();
+            // resetControls game level
             g.game_mode = "Medium";
             hard_btn.BackColor = Color.Silver;
             esy_btn.BackColor = Color.Silver;
             med_btn.BackColor = Color.Red;
+            //set score to 0
             //reset game mod
             Random_rb.Checked = true;
             Category_cb.Text = "History";
@@ -80,23 +93,36 @@ namespace Hangman
             Category_lbl.Hide();
             Category_cb.Hide();
             hint_txt.Text = "Give me a hint";
-
+            //rest keyboard color
+            foreach (Button b in worng_keys)
+            {
+                b.BackColor =SystemColors.ControlLight;
+            }
+            worng_keys.Clear();
         }
-        Game g = new Game();
-
+     
         private void Play_btn_Click(object sender, EventArgs e)
         {
+            g.trials = 9;
+            label1.Show();
+            trials_lbl.Show();
+            Category_lbltxt.Show();
+            Category_lblgame.Show();
+            trials_lbl.Text = g.trials.ToString();
             try
             {
-                string generated_Word = g.Generate_Word();
-                def_txt.Text= g.def();
+                gd = g.Generate_Game_Data();
+                string generated_Word = gd.word;
+                def_txt.Text = gd.defenition;
                 Word_lbl.Text = g.CreatDashes(generated_Word);
+                Category_lblgame.Text = gd.category_st;
                 GamingOptions_panel.Hide();
+                Quit_btn.Show();
             }
             catch (Exception)
             {
                 MessageBox.Show("Please fill the game settings correctly", "Game settings is missing", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }         
+            }
         }
 
         private void esy_btn_Click(object sender, EventArgs e)
@@ -127,9 +153,9 @@ namespace Hangman
         {
             if (Random_rb.Checked)
             {
-            g.words_mode = "Random";
-            Category_lbl.Hide();
-            Category_cb.Hide();
+                g.words_mode = "Random";
+                Category_lbl.Hide();
+                Category_cb.Hide();
             }
 
         }
@@ -153,30 +179,1172 @@ namespace Hangman
         {
             resetControls();
             GamingOptions_panel.Show();
+            label1.Hide();
+            trials_lbl.Hide();
+            Category_lbltxt.Hide();
+            Category_lblgame.Hide();
         }
-
         private void Game_Form_Load(object sender, EventArgs e)
         {
-            appearanceMax();
+            //appearanceMax();
         }
-        int i = 0;
+        //int i = 0;
         private void Game_Form_Resize(object sender, EventArgs e)
         {
-            if (i == 1)
-            {
-                appearanceNormal();
-                i = 0;
-            }
-            else
-            {
-                appearanceMax();
-                i = 1;
-            }
+            //if (i == 1)
+            //{
+            //    appearanceNormal();
+            //    i = 0;
+            //}
+            //else
+            //{
+            //    appearanceMax();
+            //    i = 1;
+            //}
         }
 
         private void hint_txt_Click(object sender, EventArgs e)
         {
-           hint_txt.Text= g.Hint();
+            hint_txt.Text = gd.hint;
         }
+
+        private void keyboard1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void next_word()
+        {
+           
+            foreach (Button b in worng_keys)
+            {
+                b.BackColor = SystemColors.ControlLight;
+            }
+            gd = g.Generate_Game_Data();
+            string generated_Word = gd.word;
+            def_txt.Text = gd.defenition;
+            Word_lbl.Text = g.CreatDashes(generated_Word);
+            Category_lblgame.Text = gd.category_st;
+            g.trials = 9;
+            label1.Show();
+            trials_lbl.Show();
+            trials_lbl.Text = g.trials.ToString();
+            Category_lbltxt.Show();
+            Category_lblgame.Show();
+            hint_txt.Text = "Give me a hint";
+            worng_keys.Clear();
+        }
+        
+        private void E_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('e', 'E');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('e', 'E');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr", Game.score.ToString());
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+
+            else
+            {
+                E.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    Game.score = 0;
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void A_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('a', 'A');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('a', 'A');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr", Game.score.ToString());
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+
+            else
+            {
+                A.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                    
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    Game.score = 0;
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                   
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void B_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('b', 'B');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('b', 'B');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr", Game.score.ToString());
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+                }
+            else
+            {
+                B.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                   
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void C_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('c', 'C');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('c', 'C');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr", Game.score.ToString());
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                C.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void D_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('d', 'D');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('d', 'D');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr", Game.score.ToString());
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                D.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void F_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('f', 'F');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('f', 'F');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr", Game.score.ToString());
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                F.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void GG_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('g', 'G');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('g', 'G');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr", Game.score.ToString());
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                GG.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void H_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('h', 'H');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('h', 'H');
+
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr", Game.score.ToString());
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                H.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void ii_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('i', 'I');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('i', 'I');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                ii.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void J_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('j', 'J');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('j', 'J');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                J.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void K_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('k', 'K');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('k', 'K');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                K.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                   
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void L_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('l', 'L');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('l', 'L');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr", Game.score.ToString());
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+
+            else
+            {
+                L.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    Game.score = 0;
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        
+        
+        }
+
+        private void M_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('m', 'M');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('m', 'M');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+
+            else
+            {
+                M.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                    
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void N_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('n', 'N');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('n', 'N');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                N.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                    
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void O_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('o', 'O');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('o', 'O');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                O.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void P_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('p', 'P');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('p', 'P');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                P.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void Q_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('q', 'Q');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('q', 'Q');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                Q.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void R_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('r', 'R');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('r', 'R');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    next_word();
+                }
+            }
+            else
+            {
+                R.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void S_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('s', 'S');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('s', 'S');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                S.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void T_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('t', 'T');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('t', 'T');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                T.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void U_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('u', 'U');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('u', 'U');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+
+            else
+            {
+                U.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void V_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('v', 'V');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('v', 'V');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                V.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void w_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('w', 'W');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('w', 'W');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                w.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void X_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('x', 'X');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('x', 'X');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                X.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void Y_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('y', 'Y');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('y', 'Y');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                Y.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                    Game.score = 0;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+
+        private void Z_Click(object sender, EventArgs e)
+        {
+            bool get = g.check_find('z', 'Z');
+            if (get == true)
+            {
+                Word_lbl.Text = g.evaluate('z', 'Z');
+                if (g.Win_or_not())
+                {
+                    MessageBox.Show("4atr");
+                    label2.Text = Game.score.ToString();
+                    next_word();
+                }
+            }
+            else
+            {
+                Z.BackColor = Color.Red;
+                if (g.trials != 1)
+                {
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    g.trials--;
+                }
+
+                else
+                {
+                    g.Win_or_not();
+                    var button = sender as Button;
+                    worng_keys.Add(button);
+                    MessageBox.Show("You Lost!", "Game over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resetControls();
+                    GamingOptions_panel.Show();
+                    label1.Hide();
+                    trials_lbl.Hide();
+                    Category_lbltxt.Hide();
+                    Category_lblgame.Hide();
+                    g.trials = 9;
+                }
+                trials_lbl.Text = g.trials.ToString();
+            }
+        }
+       
+
+        private void Quit_btn_Click_1(object sender, EventArgs e)
+        {
+            resetControls();
+            GamingOptions_panel.Show();
+        }
+        private void trials_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            //label2.Text= Game.score.ToString();
+
+        }
+    
+
+        private void GamingOptions_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    
     }
 }
+
+        
