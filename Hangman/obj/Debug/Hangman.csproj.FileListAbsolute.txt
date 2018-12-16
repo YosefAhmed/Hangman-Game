@@ -81,3 +81,4 @@ E:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.Keyboard.resources
 E:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.Properties.Resources.resources
 E:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
 E:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.pdb
+E:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache

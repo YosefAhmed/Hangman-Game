@@ -174,7 +174,12 @@ namespace Hangman
 
         private void next_word()
         {
-            resetControls();
+            //resetControls();
+            foreach (PictureBox b in worng_keys)
+            {
+                b.BackColor = Color.Transparent;
+            }
+            show_letters();
             gd = g.Generate_Game_Data();
             string generated_Word = gd.word;
             def_txt.Text = gd.defenition;
