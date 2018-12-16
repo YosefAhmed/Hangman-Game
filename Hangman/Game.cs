@@ -13,7 +13,7 @@ namespace Hangman
     class Game
     {
         //SQL CONNECTION
-        SqlConnection con = new SqlConnection(@"Data Source=desktop-sd63um7\sqlexpress;Initial Catalog=Hangman_Game;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=YOUSEF\SQLEXPRESS;Initial Catalog=Hangman_Game;Integrated Security=True");
         SqlCommand cmd1, cmd2, cmd3, cmd4;
         SqlDataReader sdr1, sdr2, sdr3, sdr4;
 

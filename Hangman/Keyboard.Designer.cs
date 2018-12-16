@@ -28,357 +28,474 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.A = new System.Windows.Forms.Button();
-            this.B = new System.Windows.Forms.Button();
-            this.C = new System.Windows.Forms.Button();
-            this.D = new System.Windows.Forms.Button();
-            this.E = new System.Windows.Forms.Button();
-            this.F = new System.Windows.Forms.Button();
-            this.G = new System.Windows.Forms.Button();
-            this.H = new System.Windows.Forms.Button();
-            this.I = new System.Windows.Forms.Button();
-            this.J = new System.Windows.Forms.Button();
-            this.K = new System.Windows.Forms.Button();
-            this.L = new System.Windows.Forms.Button();
-            this.M = new System.Windows.Forms.Button();
-            this.N = new System.Windows.Forms.Button();
-            this.O = new System.Windows.Forms.Button();
-            this.P = new System.Windows.Forms.Button();
-            this.Q = new System.Windows.Forms.Button();
-            this.R = new System.Windows.Forms.Button();
-            this.S = new System.Windows.Forms.Button();
-            this.T = new System.Windows.Forms.Button();
-            this.U = new System.Windows.Forms.Button();
-            this.V = new System.Windows.Forms.Button();
-            this.w = new System.Windows.Forms.Button();
-            this.X = new System.Windows.Forms.Button();
-            this.Y = new System.Windows.Forms.Button();
-            this.Z = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Keyboard));
+            this.A = new CustomImageButton.ImageButtonCustom();
+            this.B = new CustomImageButton.ImageButtonCustom();
+            this.C = new CustomImageButton.ImageButtonCustom();
+            this.D = new CustomImageButton.ImageButtonCustom();
+            this.E = new CustomImageButton.ImageButtonCustom();
+            this.F = new CustomImageButton.ImageButtonCustom();
+            this.G = new CustomImageButton.ImageButtonCustom();
+            this.H = new CustomImageButton.ImageButtonCustom();
+            this.I = new CustomImageButton.ImageButtonCustom();
+            this.J = new CustomImageButton.ImageButtonCustom();
+            this.K = new CustomImageButton.ImageButtonCustom();
+            this.L = new CustomImageButton.ImageButtonCustom();
+            this.M = new CustomImageButton.ImageButtonCustom();
+            this.N = new CustomImageButton.ImageButtonCustom();
+            this.O = new CustomImageButton.ImageButtonCustom();
+            this.button1 = new System.Windows.Forms.Button();
+            this.P = new CustomImageButton.ImageButtonCustom();
+            this.Q = new CustomImageButton.ImageButtonCustom();
+            this.R = new CustomImageButton.ImageButtonCustom();
+            this.S = new CustomImageButton.ImageButtonCustom();
+            this.T = new CustomImageButton.ImageButtonCustom();
+            this.U = new CustomImageButton.ImageButtonCustom();
+            this.V = new CustomImageButton.ImageButtonCustom();
+            this.W = new CustomImageButton.ImageButtonCustom();
+            this.X = new CustomImageButton.ImageButtonCustom();
+            this.Y = new CustomImageButton.ImageButtonCustom();
+            this.Z = new CustomImageButton.ImageButtonCustom();
+            ((System.ComponentModel.ISupportInitialize)(this.A)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.B)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.C)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.F)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.G)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.I)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.J)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.K)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.M)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.O)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Q)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.S)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.U)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.V)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.W)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Z)).BeginInit();
             this.SuspendLayout();
             // 
             // A
             // 
-            this.A.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.A.Location = new System.Drawing.Point(7, 6);
+            this.A.Image = ((System.Drawing.Image)(resources.GetObject("A.Image")));
+            this.A.ImageHover = null;
+            this.A.ImageNormal = null;
+            this.A.Location = new System.Drawing.Point(8, 0);
             this.A.Name = "A";
-            this.A.Size = new System.Drawing.Size(43, 31);
-            this.A.TabIndex = 0;
-            this.A.Text = "A";
-            this.A.UseVisualStyleBackColor = true;
+            this.A.Size = new System.Drawing.Size(42, 38);
+            this.A.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.A.TabIndex = 11;
+            this.A.TabStop = false;
             // 
             // B
             // 
-            this.B.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.B.Location = new System.Drawing.Point(56, 6);
+            this.B.Image = ((System.Drawing.Image)(resources.GetObject("B.Image")));
+            this.B.ImageHover = null;
+            this.B.ImageNormal = null;
+            this.B.Location = new System.Drawing.Point(57, 0);
             this.B.Name = "B";
-            this.B.Size = new System.Drawing.Size(43, 31);
-            this.B.TabIndex = 1;
-            this.B.Text = "B";
-            this.B.UseVisualStyleBackColor = true;
+            this.B.Size = new System.Drawing.Size(42, 38);
+            this.B.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.B.TabIndex = 11;
+            this.B.TabStop = false;
             // 
             // C
             // 
-            this.C.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.C.Location = new System.Drawing.Point(105, 6);
+            this.C.Image = ((System.Drawing.Image)(resources.GetObject("C.Image")));
+            this.C.ImageHover = null;
+            this.C.ImageNormal = null;
+            this.C.Location = new System.Drawing.Point(105, 0);
             this.C.Name = "C";
-            this.C.Size = new System.Drawing.Size(43, 31);
-            this.C.TabIndex = 1;
-            this.C.Text = "C";
-            this.C.UseVisualStyleBackColor = true;
+            this.C.Size = new System.Drawing.Size(42, 38);
+            this.C.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.C.TabIndex = 11;
+            this.C.TabStop = false;
             // 
             // D
             // 
-            this.D.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.D.Location = new System.Drawing.Point(154, 6);
+            this.D.Image = ((System.Drawing.Image)(resources.GetObject("D.Image")));
+            this.D.ImageHover = null;
+            this.D.ImageNormal = null;
+            this.D.Location = new System.Drawing.Point(153, 0);
             this.D.Name = "D";
-            this.D.Size = new System.Drawing.Size(43, 31);
-            this.D.TabIndex = 3;
-            this.D.Text = "D";
-            this.D.UseVisualStyleBackColor = true;
+            this.D.Size = new System.Drawing.Size(42, 38);
+            this.D.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.D.TabIndex = 11;
+            this.D.TabStop = false;
             // 
             // E
             // 
-            this.E.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.E.Location = new System.Drawing.Point(203, 6);
+            this.E.Image = ((System.Drawing.Image)(resources.GetObject("E.Image")));
+            this.E.ImageHover = null;
+            this.E.ImageNormal = null;
+            this.E.Location = new System.Drawing.Point(201, -1);
             this.E.Name = "E";
-            this.E.Size = new System.Drawing.Size(43, 31);
-            this.E.TabIndex = 2;
-            this.E.Text = "E";
-            this.E.UseVisualStyleBackColor = true;
+            this.E.Size = new System.Drawing.Size(42, 38);
+            this.E.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.E.TabIndex = 11;
+            this.E.TabStop = false;
             // 
             // F
             // 
-            this.F.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.F.Location = new System.Drawing.Point(7, 43);
+            this.F.Image = ((System.Drawing.Image)(resources.GetObject("F.Image")));
+            this.F.ImageHover = null;
+            this.F.ImageNormal = null;
+            this.F.Location = new System.Drawing.Point(8, 43);
             this.F.Name = "F";
-            this.F.Size = new System.Drawing.Size(43, 31);
-            this.F.TabIndex = 2;
-            this.F.Text = "F";
-            this.F.UseVisualStyleBackColor = true;
+            this.F.Size = new System.Drawing.Size(42, 38);
+            this.F.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.F.TabIndex = 11;
+            this.F.TabStop = false;
             // 
             // G
             // 
-            this.G.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.G.Location = new System.Drawing.Point(56, 43);
+            this.G.Image = ((System.Drawing.Image)(resources.GetObject("G.Image")));
+            this.G.ImageHover = null;
+            this.G.ImageNormal = null;
+            this.G.Location = new System.Drawing.Point(57, 43);
             this.G.Name = "G";
-            this.G.Size = new System.Drawing.Size(43, 31);
-            this.G.TabIndex = 2;
-            this.G.Text = "G";
-            this.G.UseVisualStyleBackColor = true;
+            this.G.Size = new System.Drawing.Size(42, 38);
+            this.G.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.G.TabIndex = 11;
+            this.G.TabStop = false;
             // 
             // H
             // 
-            this.H.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.H.Location = new System.Drawing.Point(105, 43);
+            this.H.Image = ((System.Drawing.Image)(resources.GetObject("H.Image")));
+            this.H.ImageHover = null;
+            this.H.ImageNormal = null;
+            this.H.Location = new System.Drawing.Point(105, 44);
             this.H.Name = "H";
-            this.H.Size = new System.Drawing.Size(43, 31);
-            this.H.TabIndex = 2;
-            this.H.Text = "H";
-            this.H.UseVisualStyleBackColor = true;
+            this.H.Size = new System.Drawing.Size(42, 38);
+            this.H.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.H.TabIndex = 11;
+            this.H.TabStop = false;
             // 
             // I
             // 
-            this.I.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.I.Location = new System.Drawing.Point(154, 43);
+            this.I.Image = ((System.Drawing.Image)(resources.GetObject("I.Image")));
+            this.I.ImageHover = null;
+            this.I.ImageNormal = null;
+            this.I.Location = new System.Drawing.Point(153, 44);
             this.I.Name = "I";
-            this.I.Size = new System.Drawing.Size(43, 31);
-            this.I.TabIndex = 2;
-            this.I.Text = "I";
-            this.I.UseVisualStyleBackColor = true;
+            this.I.Size = new System.Drawing.Size(42, 38);
+            this.I.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.I.TabIndex = 11;
+            this.I.TabStop = false;
             // 
             // J
             // 
-            this.J.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.J.Location = new System.Drawing.Point(203, 43);
+            this.J.Image = ((System.Drawing.Image)(resources.GetObject("J.Image")));
+            this.J.ImageHover = null;
+            this.J.ImageNormal = null;
+            this.J.Location = new System.Drawing.Point(201, 44);
             this.J.Name = "J";
-            this.J.Size = new System.Drawing.Size(43, 31);
-            this.J.TabIndex = 2;
-            this.J.Text = "J";
-            this.J.UseVisualStyleBackColor = true;
+            this.J.Size = new System.Drawing.Size(42, 38);
+            this.J.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.J.TabIndex = 11;
+            this.J.TabStop = false;
             // 
             // K
             // 
-            this.K.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.K.Location = new System.Drawing.Point(7, 80);
+            this.K.Image = ((System.Drawing.Image)(resources.GetObject("K.Image")));
+            this.K.ImageHover = null;
+            this.K.ImageNormal = null;
+            this.K.Location = new System.Drawing.Point(8, 87);
             this.K.Name = "K";
-            this.K.Size = new System.Drawing.Size(43, 31);
-            this.K.TabIndex = 2;
-            this.K.Text = "K";
-            this.K.UseVisualStyleBackColor = true;
+            this.K.Size = new System.Drawing.Size(42, 38);
+            this.K.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.K.TabIndex = 11;
+            this.K.TabStop = false;
             // 
             // L
             // 
-            this.L.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.L.Location = new System.Drawing.Point(56, 80);
+            this.L.Image = ((System.Drawing.Image)(resources.GetObject("L.Image")));
+            this.L.ImageHover = null;
+            this.L.ImageNormal = null;
+            this.L.Location = new System.Drawing.Point(58, 87);
             this.L.Name = "L";
-            this.L.Size = new System.Drawing.Size(43, 31);
-            this.L.TabIndex = 2;
-            this.L.Text = "L";
-            this.L.UseVisualStyleBackColor = true;
+            this.L.Size = new System.Drawing.Size(42, 38);
+            this.L.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.L.TabIndex = 11;
+            this.L.TabStop = false;
             // 
             // M
             // 
-            this.M.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.M.Location = new System.Drawing.Point(105, 80);
+            this.M.Image = ((System.Drawing.Image)(resources.GetObject("M.Image")));
+            this.M.ImageHover = null;
+            this.M.ImageNormal = null;
+            this.M.Location = new System.Drawing.Point(105, 88);
             this.M.Name = "M";
-            this.M.Size = new System.Drawing.Size(43, 31);
-            this.M.TabIndex = 2;
-            this.M.Text = "M";
-            this.M.UseVisualStyleBackColor = true;
+            this.M.Size = new System.Drawing.Size(42, 38);
+            this.M.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.M.TabIndex = 11;
+            this.M.TabStop = false;
             // 
             // N
             // 
-            this.N.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.N.Location = new System.Drawing.Point(154, 80);
+            this.N.Image = ((System.Drawing.Image)(resources.GetObject("N.Image")));
+            this.N.ImageHover = null;
+            this.N.ImageNormal = null;
+            this.N.Location = new System.Drawing.Point(153, 88);
             this.N.Name = "N";
-            this.N.Size = new System.Drawing.Size(43, 31);
-            this.N.TabIndex = 2;
-            this.N.Text = "N";
-            this.N.UseVisualStyleBackColor = true;
+            this.N.Size = new System.Drawing.Size(42, 38);
+            this.N.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.N.TabIndex = 11;
+            this.N.TabStop = false;
             // 
             // O
             // 
-            this.O.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.O.Location = new System.Drawing.Point(203, 80);
+            this.O.Image = ((System.Drawing.Image)(resources.GetObject("O.Image")));
+            this.O.ImageHover = null;
+            this.O.ImageNormal = null;
+            this.O.Location = new System.Drawing.Point(201, 88);
             this.O.Name = "O";
-            this.O.Size = new System.Drawing.Size(43, 31);
-            this.O.TabIndex = 2;
-            this.O.Text = "O";
-            this.O.UseVisualStyleBackColor = true;
+            this.O.Size = new System.Drawing.Size(42, 38);
+            this.O.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.O.TabIndex = 11;
+            this.O.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button1.Location = new System.Drawing.Point(-84, 226);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 31);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "P";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // P
             // 
-            this.P.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.P.Location = new System.Drawing.Point(7, 117);
+            this.P.Image = ((System.Drawing.Image)(resources.GetObject("P.Image")));
+            this.P.ImageHover = null;
+            this.P.ImageNormal = null;
+            this.P.Location = new System.Drawing.Point(9, 131);
             this.P.Name = "P";
-            this.P.Size = new System.Drawing.Size(43, 31);
-            this.P.TabIndex = 2;
-            this.P.Text = "P";
-            this.P.UseVisualStyleBackColor = true;
+            this.P.Size = new System.Drawing.Size(42, 38);
+            this.P.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.P.TabIndex = 11;
+            this.P.TabStop = false;
             // 
             // Q
             // 
-            this.Q.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Q.Location = new System.Drawing.Point(56, 117);
+            this.Q.Image = ((System.Drawing.Image)(resources.GetObject("Q.Image")));
+            this.Q.ImageHover = null;
+            this.Q.ImageNormal = null;
+            this.Q.Location = new System.Drawing.Point(57, 131);
             this.Q.Name = "Q";
-            this.Q.Size = new System.Drawing.Size(43, 31);
-            this.Q.TabIndex = 10;
-            this.Q.Text = "Q";
-            this.Q.UseVisualStyleBackColor = true;
+            this.Q.Size = new System.Drawing.Size(42, 38);
+            this.Q.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Q.TabIndex = 11;
+            this.Q.TabStop = false;
             // 
             // R
             // 
-            this.R.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.R.Location = new System.Drawing.Point(105, 117);
+            this.R.Image = ((System.Drawing.Image)(resources.GetObject("R.Image")));
+            this.R.ImageHover = null;
+            this.R.ImageNormal = null;
+            this.R.Location = new System.Drawing.Point(105, 131);
             this.R.Name = "R";
-            this.R.Size = new System.Drawing.Size(43, 31);
-            this.R.TabIndex = 2;
-            this.R.Text = "R";
-            this.R.UseVisualStyleBackColor = true;
+            this.R.Size = new System.Drawing.Size(42, 38);
+            this.R.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.R.TabIndex = 11;
+            this.R.TabStop = false;
             // 
             // S
             // 
-            this.S.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.S.Location = new System.Drawing.Point(154, 117);
+            this.S.Image = ((System.Drawing.Image)(resources.GetObject("S.Image")));
+            this.S.ImageHover = null;
+            this.S.ImageNormal = null;
+            this.S.Location = new System.Drawing.Point(153, 132);
             this.S.Name = "S";
-            this.S.Size = new System.Drawing.Size(43, 31);
-            this.S.TabIndex = 2;
-            this.S.Text = "S";
-            this.S.UseVisualStyleBackColor = true;
+            this.S.Size = new System.Drawing.Size(42, 38);
+            this.S.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.S.TabIndex = 11;
+            this.S.TabStop = false;
             // 
             // T
             // 
-            this.T.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.T.Location = new System.Drawing.Point(203, 117);
+            this.T.Image = ((System.Drawing.Image)(resources.GetObject("T.Image")));
+            this.T.ImageHover = null;
+            this.T.ImageNormal = null;
+            this.T.Location = new System.Drawing.Point(201, 132);
             this.T.Name = "T";
-            this.T.Size = new System.Drawing.Size(43, 31);
-            this.T.TabIndex = 2;
-            this.T.Text = "T";
-            this.T.UseVisualStyleBackColor = true;
+            this.T.Size = new System.Drawing.Size(42, 38);
+            this.T.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.T.TabIndex = 11;
+            this.T.TabStop = false;
             // 
             // U
             // 
-            this.U.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.U.Location = new System.Drawing.Point(7, 154);
+            this.U.Image = ((System.Drawing.Image)(resources.GetObject("U.Image")));
+            this.U.ImageHover = null;
+            this.U.ImageNormal = null;
+            this.U.Location = new System.Drawing.Point(8, 175);
             this.U.Name = "U";
-            this.U.Size = new System.Drawing.Size(43, 31);
-            this.U.TabIndex = 2;
-            this.U.Text = "U";
-            this.U.UseVisualStyleBackColor = true;
+            this.U.Size = new System.Drawing.Size(42, 38);
+            this.U.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.U.TabIndex = 11;
+            this.U.TabStop = false;
             // 
             // V
             // 
-            this.V.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.V.Location = new System.Drawing.Point(56, 154);
+            this.V.Image = ((System.Drawing.Image)(resources.GetObject("V.Image")));
+            this.V.ImageHover = null;
+            this.V.ImageNormal = null;
+            this.V.Location = new System.Drawing.Point(56, 175);
             this.V.Name = "V";
-            this.V.Size = new System.Drawing.Size(43, 31);
-            this.V.TabIndex = 2;
-            this.V.Text = "V";
-            this.V.UseVisualStyleBackColor = true;
+            this.V.Size = new System.Drawing.Size(42, 38);
+            this.V.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.V.TabIndex = 11;
+            this.V.TabStop = false;
             // 
-            // w
+            // W
             // 
-            this.w.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.w.Location = new System.Drawing.Point(105, 154);
-            this.w.Name = "w";
-            this.w.Size = new System.Drawing.Size(43, 31);
-            this.w.TabIndex = 2;
-            this.w.Text = "W";
-            this.w.UseVisualStyleBackColor = true;
+            this.W.Image = ((System.Drawing.Image)(resources.GetObject("W.Image")));
+            this.W.ImageHover = null;
+            this.W.ImageNormal = null;
+            this.W.Location = new System.Drawing.Point(105, 175);
+            this.W.Name = "W";
+            this.W.Size = new System.Drawing.Size(42, 38);
+            this.W.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.W.TabIndex = 11;
+            this.W.TabStop = false;
             // 
             // X
             // 
-            this.X.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.X.Location = new System.Drawing.Point(154, 154);
+            this.X.Image = ((System.Drawing.Image)(resources.GetObject("X.Image")));
+            this.X.ImageHover = null;
+            this.X.ImageNormal = null;
+            this.X.Location = new System.Drawing.Point(153, 175);
             this.X.Name = "X";
-            this.X.Size = new System.Drawing.Size(43, 31);
-            this.X.TabIndex = 2;
-            this.X.Text = "X";
-            this.X.UseVisualStyleBackColor = true;
+            this.X.Size = new System.Drawing.Size(42, 38);
+            this.X.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.X.TabIndex = 11;
+            this.X.TabStop = false;
             // 
             // Y
             // 
-            this.Y.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Y.Location = new System.Drawing.Point(203, 154);
+            this.Y.Image = ((System.Drawing.Image)(resources.GetObject("Y.Image")));
+            this.Y.ImageHover = null;
+            this.Y.ImageNormal = null;
+            this.Y.Location = new System.Drawing.Point(201, 175);
             this.Y.Name = "Y";
-            this.Y.Size = new System.Drawing.Size(43, 31);
-            this.Y.TabIndex = 2;
-            this.Y.Text = "Y";
-            this.Y.UseVisualStyleBackColor = true;
+            this.Y.Size = new System.Drawing.Size(42, 38);
+            this.Y.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Y.TabIndex = 11;
+            this.Y.TabStop = false;
             // 
             // Z
             // 
-            this.Z.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Z.Location = new System.Drawing.Point(105, 191);
+            this.Z.Image = ((System.Drawing.Image)(resources.GetObject("Z.Image")));
+            this.Z.ImageHover = null;
+            this.Z.ImageNormal = null;
+            this.Z.Location = new System.Drawing.Point(105, 219);
             this.Z.Name = "Z";
-            this.Z.Size = new System.Drawing.Size(43, 31);
-            this.Z.TabIndex = 2;
-            this.Z.Text = "Z";
-            this.Z.UseVisualStyleBackColor = true;
-            // 
+            this.Z.Size = new System.Drawing.Size(42, 38);
+            this.Z.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Z.TabIndex = 11;
+            this.Z.TabStop = false;
             // Keyboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.M);
-            this.Controls.Add(this.N);
-            this.Controls.Add(this.B);
-            this.Controls.Add(this.V);
-            this.Controls.Add(this.C);
-            this.Controls.Add(this.X);
             this.Controls.Add(this.Z);
+            this.Controls.Add(this.Y);
+            this.Controls.Add(this.X);
+            this.Controls.Add(this.W);
+            this.Controls.Add(this.V);
+            this.Controls.Add(this.U);
+            this.Controls.Add(this.T);
+            this.Controls.Add(this.S);
+            this.Controls.Add(this.R);
+            this.Controls.Add(this.Q);
+            this.Controls.Add(this.P);
+            this.Controls.Add(this.O);
+            this.Controls.Add(this.N);
+            this.Controls.Add(this.M);
             this.Controls.Add(this.L);
             this.Controls.Add(this.K);
             this.Controls.Add(this.J);
+            this.Controls.Add(this.I);
             this.Controls.Add(this.H);
             this.Controls.Add(this.G);
             this.Controls.Add(this.F);
-            this.Controls.Add(this.D);
-            this.Controls.Add(this.S);
-            this.Controls.Add(this.A);
-            this.Controls.Add(this.P);
-            this.Controls.Add(this.O);
-            this.Controls.Add(this.I);
-            this.Controls.Add(this.U);
-            this.Controls.Add(this.Y);
-            this.Controls.Add(this.T);
-            this.Controls.Add(this.R);
             this.Controls.Add(this.E);
-            this.Controls.Add(this.w);
-            this.Controls.Add(this.Q);
+            this.Controls.Add(this.D);
+            this.Controls.Add(this.C);
+            this.Controls.Add(this.B);
+            this.Controls.Add(this.A);
+            this.Controls.Add(this.button1);
             this.Name = "Keyboard";
-            this.Size = new System.Drawing.Size(255, 230);
+            this.Size = new System.Drawing.Size(586, 265);
+            ((System.ComponentModel.ISupportInitialize)(this.A)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.B)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.C)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.D)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.E)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.F)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.G)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.H)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.I)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.J)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.K)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.L)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.M)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.N)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.O)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Q)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.S)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.T)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.U)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.V)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.W)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Z)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button Q;
-        private System.Windows.Forms.Button w;
-        private System.Windows.Forms.Button E;
-        private System.Windows.Forms.Button R;
-        private System.Windows.Forms.Button T;
-        private System.Windows.Forms.Button Y;
-        private System.Windows.Forms.Button U;
-        private System.Windows.Forms.Button I;
-        private System.Windows.Forms.Button O;
-        private System.Windows.Forms.Button P;
-        private System.Windows.Forms.Button A;
-        private System.Windows.Forms.Button S;
-        private System.Windows.Forms.Button D;
-        private System.Windows.Forms.Button F;
-        private System.Windows.Forms.Button G;
-        private System.Windows.Forms.Button H;
-        private System.Windows.Forms.Button J;
-        private System.Windows.Forms.Button K;
-        private System.Windows.Forms.Button L;
-        private System.Windows.Forms.Button Z;
-        private System.Windows.Forms.Button X;
-        private System.Windows.Forms.Button C;
-        private System.Windows.Forms.Button V;
-        private System.Windows.Forms.Button B;
-        private System.Windows.Forms.Button N;
-        private System.Windows.Forms.Button M;
+        private CustomImageButton.ImageButtonCustom A;
+        private CustomImageButton.ImageButtonCustom B;
+        private CustomImageButton.ImageButtonCustom C;
+        private CustomImageButton.ImageButtonCustom D;
+        private CustomImageButton.ImageButtonCustom E;
+        private CustomImageButton.ImageButtonCustom F;
+        private CustomImageButton.ImageButtonCustom G;
+        private CustomImageButton.ImageButtonCustom H;
+        private CustomImageButton.ImageButtonCustom I;
+        private CustomImageButton.ImageButtonCustom J;
+        private CustomImageButton.ImageButtonCustom K;
+        private CustomImageButton.ImageButtonCustom L;
+        private CustomImageButton.ImageButtonCustom M;
+        private CustomImageButton.ImageButtonCustom N;
+        private CustomImageButton.ImageButtonCustom O;
+        private System.Windows.Forms.Button button1;
+        private CustomImageButton.ImageButtonCustom P;
+        private CustomImageButton.ImageButtonCustom Q;
+        private CustomImageButton.ImageButtonCustom R;
+        private CustomImageButton.ImageButtonCustom S;
+        private CustomImageButton.ImageButtonCustom T;
+        private CustomImageButton.ImageButtonCustom U;
+        private CustomImageButton.ImageButtonCustom V;
+        private CustomImageButton.ImageButtonCustom W;
+        private CustomImageButton.ImageButtonCustom X;
+        private CustomImageButton.ImageButtonCustom Y;
+        private CustomImageButton.ImageButtonCustom Z;
     }
 }
