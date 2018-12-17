@@ -31,10 +31,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game_Form));
             this.masn2a = new System.Windows.Forms.Panel();
-            this.regl_shemal = new System.Windows.Forms.Panel();
-            this.Eed_shemal = new System.Windows.Forms.Panel();
             this.regl_ymeen = new System.Windows.Forms.Panel();
+            this.regl_shemal = new System.Windows.Forms.Panel();
             this.Eed_ymeen = new System.Windows.Forms.Panel();
+            this.Eed_shemal = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gesm = new System.Windows.Forms.Panel();
             this.ra2s = new System.Windows.Forms.Panel();
             this.def_txt = new System.Windows.Forms.Label();
@@ -94,6 +96,8 @@
             this.A = new CustomImageButton.ImageButtonCustom();
             this.Quit_btn = new CustomImageButton.ImageButtonCustom();
             this.masn2a.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GamingOptions_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.easy_arow_R)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Med_arow_R)).BeginInit();
@@ -143,36 +147,18 @@
             this.masn2a.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.masn2a.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("masn2a.BackgroundImage")));
             this.masn2a.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.masn2a.Controls.Add(this.regl_shemal);
-            this.masn2a.Controls.Add(this.Eed_shemal);
             this.masn2a.Controls.Add(this.regl_ymeen);
+            this.masn2a.Controls.Add(this.regl_shemal);
             this.masn2a.Controls.Add(this.Eed_ymeen);
+            this.masn2a.Controls.Add(this.Eed_shemal);
+            this.masn2a.Controls.Add(this.pictureBox2);
+            this.masn2a.Controls.Add(this.pictureBox1);
             this.masn2a.Controls.Add(this.gesm);
             this.masn2a.Controls.Add(this.ra2s);
             this.masn2a.Location = new System.Drawing.Point(447, 135);
             this.masn2a.Name = "masn2a";
             this.masn2a.Size = new System.Drawing.Size(198, 251);
             this.masn2a.TabIndex = 1;
-            // 
-            // regl_shemal
-            // 
-            this.regl_shemal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.regl_shemal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("regl_shemal.BackgroundImage")));
-            this.regl_shemal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.regl_shemal.Location = new System.Drawing.Point(125, 146);
-            this.regl_shemal.Name = "regl_shemal";
-            this.regl_shemal.Size = new System.Drawing.Size(24, 25);
-            this.regl_shemal.TabIndex = 7;
-            // 
-            // Eed_shemal
-            // 
-            this.Eed_shemal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Eed_shemal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Eed_shemal.BackgroundImage")));
-            this.Eed_shemal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Eed_shemal.Location = new System.Drawing.Point(127, 121);
-            this.Eed_shemal.Name = "Eed_shemal";
-            this.Eed_shemal.Size = new System.Drawing.Size(24, 25);
-            this.Eed_shemal.TabIndex = 6;
             // 
             // regl_ymeen
             // 
@@ -184,6 +170,16 @@
             this.regl_ymeen.Size = new System.Drawing.Size(24, 25);
             this.regl_ymeen.TabIndex = 5;
             // 
+            // regl_shemal
+            // 
+            this.regl_shemal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.regl_shemal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("regl_shemal.BackgroundImage")));
+            this.regl_shemal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.regl_shemal.Location = new System.Drawing.Point(125, 146);
+            this.regl_shemal.Name = "regl_shemal";
+            this.regl_shemal.Size = new System.Drawing.Size(24, 25);
+            this.regl_shemal.TabIndex = 7;
+            // 
             // Eed_ymeen
             // 
             this.Eed_ymeen.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -193,6 +189,32 @@
             this.Eed_ymeen.Name = "Eed_ymeen";
             this.Eed_ymeen.Size = new System.Drawing.Size(24, 25);
             this.Eed_ymeen.TabIndex = 4;
+            // 
+            // Eed_shemal
+            // 
+            this.Eed_shemal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Eed_shemal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Eed_shemal.BackgroundImage")));
+            this.Eed_shemal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Eed_shemal.Location = new System.Drawing.Point(127, 121);
+            this.Eed_shemal.Name = "Eed_shemal";
+            this.Eed_shemal.Size = new System.Drawing.Size(24, 25);
+            this.Eed_shemal.TabIndex = 6;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(125, 178);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(44, 28);
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(65, 178);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 28);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // gesm
             // 
@@ -965,9 +987,10 @@
             this.Name = "Game_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
-            this.Load += new System.EventHandler(this.Game_Form_Load);
-            this.Resize += new System.EventHandler(this.Game_Form_Resize);
+         //   this.Resize += new System.EventHandler(this.Game_Form_Resize);
             this.masn2a.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GamingOptions_panel.ResumeLayout(false);
             this.GamingOptions_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.easy_arow_R)).EndInit();
@@ -1081,6 +1104,8 @@
         private CustomImageButton.ImageButtonCustom B;
         private CustomImageButton.ImageButtonCustom A;
         private CustomImageButton.ImageButtonCustom GG;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
 
     }
 }

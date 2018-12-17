@@ -28,6 +28,15 @@ namespace Hangman
             Hard_arow_R.Hide();
             easy_arow_L.Hide();
             easy_arow_R.Hide();
+            masn2a.Hide();
+            ra2s.Hide();
+            gesm.Hide();
+            Eed_ymeen.Hide();
+            regl_ymeen.Hide();
+            regl_shemal.Hide();
+            Eed_shemal.Hide();
+            pictureBox1.Hide();
+            pictureBox2.Hide();
         }
         public void hide_arrows()
         {
@@ -52,20 +61,26 @@ namespace Hangman
         //public void appearanceMax()
         //{
         //    GamingOptions_panel.Size = new Size(1366, 650);
-        //    Play_btn.Size = new Size(190, 70);
+        //    Play_btn.Size = new Size(190, 80);
         //    Play_btn.Location = new Point(1100, 25);
-        //    choos_lbl.Location = new Point(660, 70);
-        //    hard_btn.Size = new Size(400, 100);
-        //    hard_btn.Location = new Point(500,112 );
-        //    med_btn.Size = new Size(400, 100);
-        //    med_btn.Location = new Point(500, 262);
-        //    esy_btn.Size = new Size(400, 100);
-        //    esy_btn.Location = new Point(500, 412);
-        //    category_pnl.Location = new Point(530, 530);
+        //    choos_lbl.Location = new Point(615, 70);
+        //    hard_btn.Size = new Size(400, 110);
+        //    hard_btn.Location = new Point(470, 112);
+        //    Hard_arow_L.Location = new Point(405, 155);
+        //    Hard_arow_R.Location = new Point(890, 155);
+        //    med_btn.Size = new Size(400, 110);
+        //    med_btn.Location = new Point(470, 262);
+        //    Med_arow_L.Location = new Point(405, 305);
+        //    Med_arow_R.Location = new Point(890, 305);
+        //    esy_btn.Size = new Size(400, 110);
+        //    esy_btn.Location = new Point(470, 412);
+        //    easy_arow_L.Location = new Point(405, 450);
+        //    easy_arow_R.Location = new Point(890, 450);
+        //    category_pnl.Location = new Point(470, 540);
 
         //    Quit_btn.Size = new Size(150, 70);
         //    Quit_btn.Location = new Point(1200, 25);
-        //   // keyboard1.Size = new Size(350, 330);
+        //    // keyboard1.Size = new Size(350, 330);
         //    //keyboard1.Location = new Point(280, 280);
         //    masn2a.Size = new Size(450, 400);
         //    masn2a.Location = new Point(800, 150);
@@ -75,17 +90,23 @@ namespace Hangman
         ////for Normal
         //public void appearanceNormal()
         //{
-        //    GamingOptions_panel.Size = new Size(660, 437);
+        //    GamingOptions_panel.Size = new Size(669, 456);
         //    Play_btn.Size = new Size(130, 55);
         //    Play_btn.Location = new Point(486, 25);
-        //    choos_lbl.Location = new Point(249, 79);
+        //    choos_lbl.Location = new Point(225, 79);
         //    hard_btn.Size = new Size(176, 55);
         //    hard_btn.Location = new Point(195, 112);
+        //    Hard_arow_L.Location = new Point(140, 123);
+        //    Hard_arow_R.Location = new Point(385, 123);
         //    med_btn.Size = new Size(176, 55);
         //    med_btn.Location = new Point(195, 184);
+        //    Med_arow_L.Location = new Point(140, 198);
+        //    Med_arow_R.Location = new Point(385, 198);
         //    esy_btn.Size = new Size(176, 55);
         //    esy_btn.Location = new Point(195, 257);
-        //    category_pnl.Location = new Point(112, 320);
+        //    easy_arow_L.Location = new Point(140, 270);
+        //    easy_arow_R.Location = new Point(385, 269);
+        //    category_pnl.Location = new Point(80, 340);
 
         //    Quit_btn.Size = new Size(115, 53);
         //    Quit_btn.Location = new Point(557, 12);
@@ -95,6 +116,41 @@ namespace Hangman
         //    def_txt.Location = new Point(139, 25);
         //    hint_txt.Location = new Point(262, 416);
         //}
+
+        public void show_img(int trys)
+        {
+            switch (trys)
+            {
+                case 9:
+                    masn2a.Show();
+                    break;
+                case 8:
+                    ra2s.Show();
+                    break;
+                case 7:
+                    gesm.Show();
+                    break;
+                case 6:
+                    Eed_shemal.Show();
+                    break;
+                case 5:
+                    Eed_ymeen.Show();
+                    break;
+                case 4:
+                    regl_shemal.Show();
+                    break;
+                case 3:
+                    regl_ymeen.Show();
+                    break;
+                case 2:
+                    pictureBox2.Show();
+                    break;
+                case 1:
+                    pictureBox1.Show();
+                    break;
+
+            }
+        }
         private void resetControls() //resets controls in GamingOptions_panel when quit button is pressed
         {
             Game.score = 0;
@@ -117,6 +173,15 @@ namespace Hangman
             q = true; w = true; ee = true; r = true; t = true; y = true; u = true; i = true; bb = true; v = true; c = true; x = true; z = true;
             show_letters();
             worng_keys.Clear();
+            masn2a.Hide();
+            ra2s.Hide();
+            gesm.Hide();
+            Eed_ymeen.Hide();
+            regl_ymeen.Hide();
+            regl_shemal.Hide();
+            Eed_shemal.Hide();
+            pictureBox1.Hide();
+            pictureBox2.Hide();
         }
      
 
@@ -148,24 +213,21 @@ namespace Hangman
         }
 
 
-        private void Game_Form_Load(object sender, EventArgs e)
-        {
-            //appearanceMax();
-        }
-        //int i = 0;
-        private void Game_Form_Resize(object sender, EventArgs e)
-        {
-            //if (i == 1)
-            //{
-            //    appearanceNormal();
-            //    i = 0;
-            //}
-            //else
-            //{
-            //    appearanceMax();
-            //    i = 1;
-            //}
-        }
+
+        //int Var = 0;
+        //private void Game_Form_Resize(object sender, EventArgs e)
+        //{
+        //    if (Var == 1)
+        //    {
+        //        appearanceNormal();
+        //        Var = 0;
+        //    }
+        //    else
+        //    {
+        //        appearanceMax();
+        //        Var = 1;
+        //    }
+        //}
 
         private void hint_txt_Click(object sender, EventArgs e)
         {
@@ -179,6 +241,15 @@ namespace Hangman
             {
                 b.BackColor = Color.Transparent;
             }
+            masn2a.Hide();
+            ra2s.Hide();
+            gesm.Hide();
+            Eed_ymeen.Hide();
+            regl_ymeen.Hide();
+            regl_shemal.Hide();
+            Eed_shemal.Hide();
+            pictureBox1.Hide();
+            pictureBox2.Hide();
             show_letters();
             gd = g.Generate_Game_Data();
             string generated_Word = gd.word;
@@ -195,11 +266,6 @@ namespace Hangman
             worng_keys.Clear();
         }
                
-        private void Quit_btn_Click_1(object sender, EventArgs e)
-        {
-            resetControls();
-            GamingOptions_panel.Show();
-        }
 
         private void hard_btn_Click(object sender, EventArgs e)
         {
@@ -278,6 +344,7 @@ namespace Hangman
 
                 else
                 {
+                    show_img(g.trials);
                     A.BackColor = Color.Red;
                     a = false;
                     if (g.trials != 1)
@@ -327,6 +394,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     B.BackColor = Color.Red;
                     bb = false;
                     if (g.trials != 1)
@@ -374,6 +442,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     C.BackColor = Color.Red;
                     c = false;
                     if (g.trials != 1)
@@ -421,6 +490,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     D.BackColor = Color.Red;
                     d = false;
                     if (g.trials != 1)
@@ -469,6 +539,7 @@ namespace Hangman
 
                 else
                 {
+                    show_img(g.trials);
                     E.BackColor = Color.Red;
                     ee = false;
                     if (g.trials != 1)
@@ -518,6 +589,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     F.BackColor = Color.Red;
                     f = false;
                     if (g.trials != 1)
@@ -565,6 +637,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     GG.BackColor = Color.Red;
                     gg = false;
                     if (g.trials != 1)
@@ -613,6 +686,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     H.BackColor = Color.Red;
                     h = false;
                     if (g.trials != 1)
@@ -660,6 +734,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     II.BackColor = Color.Red;
                     i = false;
                     if (g.trials != 1)
@@ -707,6 +782,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     J.BackColor = Color.Red;
                     j = false;
                     if (g.trials != 1)
@@ -754,6 +830,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     K.BackColor = Color.Red;
                     k = false;
                     if (g.trials != 1)
@@ -803,6 +880,7 @@ namespace Hangman
 
                 else
                 {
+                    show_img(g.trials);
                     L.BackColor = Color.Red;
                     l = false;
                     if (g.trials != 1)
@@ -853,6 +931,7 @@ namespace Hangman
 
                 else
                 {
+                    show_img(g.trials);
                     M.BackColor = Color.Red;
                     m = false;
                     if (g.trials != 1)
@@ -901,6 +980,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     N.BackColor = Color.Red;
                     n = false;
                     if (g.trials != 1)
@@ -949,6 +1029,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     O.BackColor = Color.Red;
                     o = false;
                     if (g.trials != 1)
@@ -996,6 +1077,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     P.BackColor = Color.Red;
                     p = false;
                     if (g.trials != 1)
@@ -1043,6 +1125,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     Q.BackColor = Color.Red;
                     q = false;
                     if (g.trials != 1)
@@ -1089,6 +1172,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     R.BackColor = Color.Red;
                     r = false;
                     if (g.trials != 1)
@@ -1136,6 +1220,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     S.BackColor = Color.Red;
                     s = false;
                     if (g.trials != 1)
@@ -1183,6 +1268,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     T.BackColor = Color.Red;
                     t = false;
                     if (g.trials != 1)
@@ -1231,6 +1317,7 @@ namespace Hangman
 
                 else
                 {
+                    show_img(g.trials);
                     U.BackColor = Color.Red;
                     u = false;
                     if (g.trials != 1)
@@ -1278,6 +1365,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     V.BackColor = Color.Red;
                     v = false;
                     if (g.trials != 1)
@@ -1325,6 +1413,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     W.BackColor = Color.Red;
                     w = false;
                     if (g.trials != 1)
@@ -1372,6 +1461,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     X.BackColor = Color.Red;
                     x = false;
                     if (g.trials != 1)
@@ -1419,6 +1509,7 @@ namespace Hangman
                 }
                 else
                 {
+                    show_img(g.trials);
                     Y.BackColor = Color.Red;
                     y = false;
                     if (g.trials != 1)
@@ -1466,7 +1557,7 @@ namespace Hangman
                 }
                 else
                 {
-                    //this.Z.ImageHover = ((System.Drawing.Image)(resources.GetObject("Z.ImageHover")));
+                    show_img(g.trials);
                     Z.BackColor = Color.Red;
                     z = false;
                     if (g.trials != 1)
