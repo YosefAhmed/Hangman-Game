@@ -13,31 +13,14 @@ namespace Hangman
 {
     public partial class Game_Form : Form
     {
-        ArrayList worng_keys = new ArrayList();
-        Game g = new Game();
-        Game.DATA gd = new Game.DATA();
         public Game_Form()
         {
             
             InitializeComponent();
-            Category_cb.Hide();
-            Category_lbl.Hide();
-            Category_lbltxt.Hide();
-            Category_lblgame.Hide();
-            Hard_arow_L.Hide();
-            Hard_arow_R.Hide();
-            easy_arow_L.Hide();
-            easy_arow_R.Hide();
-            masn2a.Hide();
-            ra2s.Hide();
-            gesm.Hide();
-            Eed_ymeen.Hide();
-            regl_ymeen.Hide();
-            regl_shemal.Hide();
-            Eed_shemal.Hide();
-            pictureBox1.Hide();
-            pictureBox2.Hide();
         }
+        ArrayList worng_keys = new ArrayList();
+        Game g = new Game();
+        Game.DATA gd = new Game.DATA();
         public void hide_arrows()
         {
             Hard_arow_L.Hide();
@@ -122,31 +105,31 @@ namespace Hangman
             switch (trys)
             {
                 case 9:
-                    masn2a.Show();
+                    KA3DA.Show();
                     break;
                 case 8:
-                    ra2s.Show();
+                    masn2a.Show();
                     break;
                 case 7:
-                    gesm.Show();
+                    Habl.Show();
                     break;
                 case 6:
-                    Eed_shemal.Show();
+                    ra2s.Show();
                     break;
                 case 5:
-                    Eed_ymeen.Show();
+                    gesm.Show();
                     break;
                 case 4:
-                    regl_shemal.Show();
+                    Eed_ymeen.Show();
                     break;
                 case 3:
-                    regl_ymeen.Show();
+                    Eed_shemal.Show();
                     break;
                 case 2:
-                    pictureBox2.Show();
+                    regl_ymeen.Show();
                     break;
                 case 1:
-                    pictureBox1.Show();
+                    regl_shemal.Show();
                     break;
 
             }
@@ -173,15 +156,15 @@ namespace Hangman
             q = true; w = true; ee = true; r = true; t = true; y = true; u = true; i = true; bb = true; v = true; c = true; x = true; z = true;
             show_letters();
             worng_keys.Clear();
+            KA3DA.Hide();
             masn2a.Hide();
+            Habl.Hide();
             ra2s.Hide();
             gesm.Hide();
             Eed_ymeen.Hide();
             regl_ymeen.Hide();
             regl_shemal.Hide();
             Eed_shemal.Hide();
-            pictureBox1.Hide();
-            pictureBox2.Hide();
         }
      
 
@@ -212,23 +195,6 @@ namespace Hangman
             g.category = Category_cb.SelectedItem.ToString();
         }
 
-
-
-        //int Var = 0;
-        //private void Game_Form_Resize(object sender, EventArgs e)
-        //{
-        //    if (Var == 1)
-        //    {
-        //        appearanceNormal();
-        //        Var = 0;
-        //    }
-        //    else
-        //    {
-        //        appearanceMax();
-        //        Var = 1;
-        //    }
-        //}
-
         private void hint_txt_Click(object sender, EventArgs e)
         {
             hint_txt.Text = gd.hint;
@@ -236,20 +202,20 @@ namespace Hangman
 
         private void next_word()
         {
-            //resetControls();
+            
             foreach (PictureBox b in worng_keys)
             {
                 b.BackColor = Color.Transparent;
             }
+            KA3DA.Hide();
             masn2a.Hide();
+            Habl.Hide();
             ra2s.Hide();
             gesm.Hide();
             Eed_ymeen.Hide();
             regl_ymeen.Hide();
             regl_shemal.Hide();
             Eed_shemal.Hide();
-            pictureBox1.Hide();
-            pictureBox2.Hide();
             show_letters();
             gd = g.Generate_Game_Data();
             string generated_Word = gd.word;
@@ -1584,6 +1550,27 @@ namespace Hangman
                     trials_lbl.Text = g.trials.ToString();
                 }
             }
+        }
+
+        private void Game_Form_Load(object sender, EventArgs e)
+        {
+            Category_cb.Hide();
+            Category_lbl.Hide();
+            Category_lbltxt.Hide();
+            Category_lblgame.Hide();
+            Hard_arow_L.Hide();
+            Hard_arow_R.Hide();
+            easy_arow_L.Hide();
+            easy_arow_R.Hide();
+            KA3DA.Hide();
+            masn2a.Hide();
+            Habl.Hide();
+            ra2s.Hide();
+            gesm.Hide();
+            Eed_ymeen.Hide();
+            regl_ymeen.Hide();
+            regl_shemal.Hide();
+            Eed_shemal.Hide();
         }
 
 

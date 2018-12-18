@@ -60,12 +60,6 @@
     <Compile Include="ImageButtonCustom.designer.cs">
       <DependentUpon>ImageButtonCustom.cs</DependentUpon>
     </Compile>
-    <Compile Include="Keyboard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Keyboard.Designer.cs">
-      <DependentUpon>Keyboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WinAPI.cs" />
@@ -74,9 +68,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ImageButtonCustom.resx">
       <DependentUpon>ImageButtonCustom.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Keyboard.resx">
-      <DependentUpon>Keyboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

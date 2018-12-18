@@ -30,15 +30,6 @@
         public void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game_Form));
-            this.masn2a = new System.Windows.Forms.Panel();
-            this.regl_ymeen = new System.Windows.Forms.Panel();
-            this.regl_shemal = new System.Windows.Forms.Panel();
-            this.Eed_ymeen = new System.Windows.Forms.Panel();
-            this.Eed_shemal = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gesm = new System.Windows.Forms.Panel();
-            this.ra2s = new System.Windows.Forms.Panel();
             this.def_txt = new System.Windows.Forms.Label();
             this.hint_txt = new System.Windows.Forms.Label();
             this.Word_lbl = new System.Windows.Forms.Label();
@@ -95,9 +86,16 @@
             this.B = new CustomImageButton.ImageButtonCustom();
             this.A = new CustomImageButton.ImageButtonCustom();
             this.Quit_btn = new CustomImageButton.ImageButtonCustom();
-            this.masn2a.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.KA3DA = new System.Windows.Forms.PictureBox();
+            this.masn2a = new System.Windows.Forms.PictureBox();
+            this.Habl = new System.Windows.Forms.PictureBox();
+            this.ra2s = new System.Windows.Forms.PictureBox();
+            this.gesm = new System.Windows.Forms.PictureBox();
+            this.Eed_ymeen = new System.Windows.Forms.PictureBox();
+            this.Eed_shemal = new System.Windows.Forms.PictureBox();
+            this.regl_shemal = new System.Windows.Forms.PictureBox();
+            this.regl_ymeen = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.GamingOptions_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.easy_arow_R)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Med_arow_R)).BeginInit();
@@ -139,110 +137,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.B)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.A)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Quit_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KA3DA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masn2a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Habl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ra2s)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Eed_ymeen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Eed_shemal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.regl_shemal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.regl_ymeen)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // masn2a
-            // 
-            this.masn2a.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.masn2a.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.masn2a.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("masn2a.BackgroundImage")));
-            this.masn2a.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.masn2a.Controls.Add(this.regl_ymeen);
-            this.masn2a.Controls.Add(this.regl_shemal);
-            this.masn2a.Controls.Add(this.Eed_ymeen);
-            this.masn2a.Controls.Add(this.Eed_shemal);
-            this.masn2a.Controls.Add(this.pictureBox2);
-            this.masn2a.Controls.Add(this.pictureBox1);
-            this.masn2a.Controls.Add(this.gesm);
-            this.masn2a.Controls.Add(this.ra2s);
-            this.masn2a.Location = new System.Drawing.Point(447, 135);
-            this.masn2a.Name = "masn2a";
-            this.masn2a.Size = new System.Drawing.Size(198, 251);
-            this.masn2a.TabIndex = 1;
-            // 
-            // regl_ymeen
-            // 
-            this.regl_ymeen.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.regl_ymeen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("regl_ymeen.BackgroundImage")));
-            this.regl_ymeen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.regl_ymeen.Location = new System.Drawing.Point(96, 147);
-            this.regl_ymeen.Name = "regl_ymeen";
-            this.regl_ymeen.Size = new System.Drawing.Size(24, 25);
-            this.regl_ymeen.TabIndex = 5;
-            // 
-            // regl_shemal
-            // 
-            this.regl_shemal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.regl_shemal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("regl_shemal.BackgroundImage")));
-            this.regl_shemal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.regl_shemal.Location = new System.Drawing.Point(125, 146);
-            this.regl_shemal.Name = "regl_shemal";
-            this.regl_shemal.Size = new System.Drawing.Size(24, 25);
-            this.regl_shemal.TabIndex = 7;
-            // 
-            // Eed_ymeen
-            // 
-            this.Eed_ymeen.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Eed_ymeen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Eed_ymeen.BackgroundImage")));
-            this.Eed_ymeen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Eed_ymeen.Location = new System.Drawing.Point(94, 121);
-            this.Eed_ymeen.Name = "Eed_ymeen";
-            this.Eed_ymeen.Size = new System.Drawing.Size(24, 25);
-            this.Eed_ymeen.TabIndex = 4;
-            // 
-            // Eed_shemal
-            // 
-            this.Eed_shemal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Eed_shemal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Eed_shemal.BackgroundImage")));
-            this.Eed_shemal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Eed_shemal.Location = new System.Drawing.Point(127, 121);
-            this.Eed_shemal.Name = "Eed_shemal";
-            this.Eed_shemal.Size = new System.Drawing.Size(24, 25);
-            this.Eed_shemal.TabIndex = 6;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(125, 178);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(44, 28);
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(65, 178);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 28);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // gesm
-            // 
-            this.gesm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gesm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gesm.BackgroundImage")));
-            this.gesm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gesm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gesm.Location = new System.Drawing.Point(105, 122);
-            this.gesm.Name = "gesm";
-            this.gesm.Size = new System.Drawing.Size(37, 37);
-            this.gesm.TabIndex = 3;
-            // 
-            // ra2s
-            // 
-            this.ra2s.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ra2s.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ra2s.BackgroundImage")));
-            this.ra2s.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ra2s.Location = new System.Drawing.Point(104, 89);
-            this.ra2s.Name = "ra2s";
-            this.ra2s.Size = new System.Drawing.Size(37, 37);
-            this.ra2s.TabIndex = 2;
             // 
             // def_txt
             // 
             this.def_txt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.def_txt.AutoSize = true;
+            this.def_txt.BackColor = System.Drawing.Color.Transparent;
             this.def_txt.Font = new System.Drawing.Font("Maiandra GD", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.def_txt.Location = new System.Drawing.Point(91, 31);
+            this.def_txt.Location = new System.Drawing.Point(3, 0);
             this.def_txt.Name = "def_txt";
             this.def_txt.Size = new System.Drawing.Size(118, 16);
             this.def_txt.TabIndex = 0;
@@ -252,6 +165,7 @@
             // 
             this.hint_txt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.hint_txt.AutoSize = true;
+            this.hint_txt.BackColor = System.Drawing.Color.Transparent;
             this.hint_txt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hint_txt.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hint_txt.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -266,6 +180,7 @@
             // 
             this.Word_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Word_lbl.AutoSize = true;
+            this.Word_lbl.BackColor = System.Drawing.Color.Transparent;
             this.Word_lbl.Font = new System.Drawing.Font("Maiandra GD", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Word_lbl.Location = new System.Drawing.Point(239, 100);
             this.Word_lbl.Name = "Word_lbl";
@@ -288,7 +203,7 @@
             this.GamingOptions_panel.Controls.Add(this.hard_btn);
             this.GamingOptions_panel.Controls.Add(this.category_pnl);
             this.GamingOptions_panel.Controls.Add(this.choos_lbl);
-            this.GamingOptions_panel.Location = new System.Drawing.Point(10, 12);
+            this.GamingOptions_panel.Location = new System.Drawing.Point(10, 9);
             this.GamingOptions_panel.Name = "GamingOptions_panel";
             this.GamingOptions_panel.Size = new System.Drawing.Size(669, 456);
             this.GamingOptions_panel.TabIndex = 14;
@@ -355,6 +270,7 @@
             // 
             // Play_btn
             // 
+            this.Play_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Play_btn.Image = ((System.Drawing.Image)(resources.GetObject("Play_btn.Image")));
             this.Play_btn.ImageHover = ((System.Drawing.Image)(resources.GetObject("Play_btn.ImageHover")));
             this.Play_btn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("Play_btn.ImageNormal")));
@@ -368,6 +284,7 @@
             // 
             // esy_btn
             // 
+            this.esy_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.esy_btn.Image = ((System.Drawing.Image)(resources.GetObject("esy_btn.Image")));
             this.esy_btn.ImageHover = ((System.Drawing.Image)(resources.GetObject("esy_btn.ImageHover")));
             this.esy_btn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("esy_btn.ImageNormal")));
@@ -381,6 +298,7 @@
             // 
             // med_btn
             // 
+            this.med_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.med_btn.Image = ((System.Drawing.Image)(resources.GetObject("med_btn.Image")));
             this.med_btn.ImageHover = ((System.Drawing.Image)(resources.GetObject("med_btn.ImageHover")));
             this.med_btn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("med_btn.ImageNormal")));
@@ -394,6 +312,7 @@
             // 
             // hard_btn
             // 
+            this.hard_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hard_btn.Image = ((System.Drawing.Image)(resources.GetObject("hard_btn.Image")));
             this.hard_btn.ImageHover = ((System.Drawing.Image)(resources.GetObject("hard_btn.ImageHover")));
             this.hard_btn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("hard_btn.ImageNormal")));
@@ -519,6 +438,7 @@
             // your_trials_lbl
             // 
             this.your_trials_lbl.AutoSize = true;
+            this.your_trials_lbl.BackColor = System.Drawing.Color.Transparent;
             this.your_trials_lbl.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.your_trials_lbl.Location = new System.Drawing.Point(462, 105);
             this.your_trials_lbl.Name = "your_trials_lbl";
@@ -529,6 +449,7 @@
             // trials_lbl
             // 
             this.trials_lbl.AutoSize = true;
+            this.trials_lbl.BackColor = System.Drawing.Color.Transparent;
             this.trials_lbl.Font = new System.Drawing.Font("MV Boli", 9.75F);
             this.trials_lbl.Location = new System.Drawing.Point(613, 105);
             this.trials_lbl.Name = "trials_lbl";
@@ -539,6 +460,7 @@
             // score_lbl
             // 
             this.score_lbl.AutoSize = true;
+            this.score_lbl.BackColor = System.Drawing.Color.Transparent;
             this.score_lbl.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.score_lbl.ForeColor = System.Drawing.Color.Red;
             this.score_lbl.Location = new System.Drawing.Point(142, 78);
@@ -552,6 +474,7 @@
             // your_score_lbl
             // 
             this.your_score_lbl.AutoSize = true;
+            this.your_score_lbl.BackColor = System.Drawing.Color.Transparent;
             this.your_score_lbl.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.your_score_lbl.ForeColor = System.Drawing.Color.Brown;
             this.your_score_lbl.Location = new System.Drawing.Point(6, 79);
@@ -564,6 +487,7 @@
             // Category_lbltxt
             // 
             this.Category_lbltxt.AutoSize = true;
+            this.Category_lbltxt.BackColor = System.Drawing.Color.Transparent;
             this.Category_lbltxt.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Category_lbltxt.Location = new System.Drawing.Point(535, 78);
             this.Category_lbltxt.Name = "Category_lbltxt";
@@ -574,6 +498,7 @@
             // Category_lblgame
             // 
             this.Category_lblgame.AutoSize = true;
+            this.Category_lblgame.BackColor = System.Drawing.Color.Transparent;
             this.Category_lblgame.Font = new System.Drawing.Font("MV Boli", 9.75F);
             this.Category_lblgame.Location = new System.Drawing.Point(613, 81);
             this.Category_lblgame.Name = "Category_lblgame";
@@ -583,6 +508,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.Z);
             this.panel2.Controls.Add(this.Y);
             this.panel2.Controls.Add(this.X);
@@ -616,6 +542,7 @@
             // 
             // Z
             // 
+            this.Z.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Z.Image = ((System.Drawing.Image)(resources.GetObject("Z.Image")));
             this.Z.ImageHover = ((System.Drawing.Image)(resources.GetObject("Z.ImageHover")));
             this.Z.ImageNormal = ((System.Drawing.Image)(resources.GetObject("Z.ImageNormal")));
@@ -629,6 +556,7 @@
             // 
             // Y
             // 
+            this.Y.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Y.Image = ((System.Drawing.Image)(resources.GetObject("Y.Image")));
             this.Y.ImageHover = ((System.Drawing.Image)(resources.GetObject("Y.ImageHover")));
             this.Y.ImageNormal = ((System.Drawing.Image)(resources.GetObject("Y.ImageNormal")));
@@ -642,6 +570,7 @@
             // 
             // X
             // 
+            this.X.Cursor = System.Windows.Forms.Cursors.Hand;
             this.X.Image = ((System.Drawing.Image)(resources.GetObject("X.Image")));
             this.X.ImageHover = ((System.Drawing.Image)(resources.GetObject("X.ImageHover")));
             this.X.ImageNormal = ((System.Drawing.Image)(resources.GetObject("X.ImageNormal")));
@@ -655,6 +584,7 @@
             // 
             // W
             // 
+            this.W.Cursor = System.Windows.Forms.Cursors.Hand;
             this.W.Image = ((System.Drawing.Image)(resources.GetObject("W.Image")));
             this.W.ImageHover = ((System.Drawing.Image)(resources.GetObject("W.ImageHover")));
             this.W.ImageNormal = ((System.Drawing.Image)(resources.GetObject("W.ImageNormal")));
@@ -668,6 +598,7 @@
             // 
             // V
             // 
+            this.V.Cursor = System.Windows.Forms.Cursors.Hand;
             this.V.Image = ((System.Drawing.Image)(resources.GetObject("V.Image")));
             this.V.ImageHover = ((System.Drawing.Image)(resources.GetObject("V.ImageHover")));
             this.V.ImageNormal = ((System.Drawing.Image)(resources.GetObject("V.ImageNormal")));
@@ -681,6 +612,7 @@
             // 
             // U
             // 
+            this.U.Cursor = System.Windows.Forms.Cursors.Hand;
             this.U.Image = ((System.Drawing.Image)(resources.GetObject("U.Image")));
             this.U.ImageHover = ((System.Drawing.Image)(resources.GetObject("U.ImageHover")));
             this.U.ImageNormal = ((System.Drawing.Image)(resources.GetObject("U.ImageNormal")));
@@ -694,6 +626,7 @@
             // 
             // T
             // 
+            this.T.Cursor = System.Windows.Forms.Cursors.Hand;
             this.T.Image = ((System.Drawing.Image)(resources.GetObject("T.Image")));
             this.T.ImageHover = ((System.Drawing.Image)(resources.GetObject("T.ImageHover")));
             this.T.ImageNormal = ((System.Drawing.Image)(resources.GetObject("T.ImageNormal")));
@@ -707,6 +640,7 @@
             // 
             // S
             // 
+            this.S.Cursor = System.Windows.Forms.Cursors.Hand;
             this.S.Image = ((System.Drawing.Image)(resources.GetObject("S.Image")));
             this.S.ImageHover = ((System.Drawing.Image)(resources.GetObject("S.ImageHover")));
             this.S.ImageNormal = ((System.Drawing.Image)(resources.GetObject("S.ImageNormal")));
@@ -720,6 +654,7 @@
             // 
             // R
             // 
+            this.R.Cursor = System.Windows.Forms.Cursors.Hand;
             this.R.Image = ((System.Drawing.Image)(resources.GetObject("R.Image")));
             this.R.ImageHover = ((System.Drawing.Image)(resources.GetObject("R.ImageHover")));
             this.R.ImageNormal = ((System.Drawing.Image)(resources.GetObject("R.ImageNormal")));
@@ -733,6 +668,7 @@
             // 
             // Q
             // 
+            this.Q.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Q.Image = ((System.Drawing.Image)(resources.GetObject("Q.Image")));
             this.Q.ImageHover = ((System.Drawing.Image)(resources.GetObject("Q.ImageHover")));
             this.Q.ImageNormal = ((System.Drawing.Image)(resources.GetObject("Q.ImageNormal")));
@@ -746,6 +682,7 @@
             // 
             // P
             // 
+            this.P.Cursor = System.Windows.Forms.Cursors.Hand;
             this.P.Image = ((System.Drawing.Image)(resources.GetObject("P.Image")));
             this.P.ImageHover = ((System.Drawing.Image)(resources.GetObject("P.ImageHover")));
             this.P.ImageNormal = ((System.Drawing.Image)(resources.GetObject("P.ImageNormal")));
@@ -759,6 +696,7 @@
             // 
             // O
             // 
+            this.O.Cursor = System.Windows.Forms.Cursors.Hand;
             this.O.Image = ((System.Drawing.Image)(resources.GetObject("O.Image")));
             this.O.ImageHover = ((System.Drawing.Image)(resources.GetObject("O.ImageHover")));
             this.O.ImageNormal = ((System.Drawing.Image)(resources.GetObject("O.ImageNormal")));
@@ -772,6 +710,7 @@
             // 
             // N
             // 
+            this.N.Cursor = System.Windows.Forms.Cursors.Hand;
             this.N.Image = ((System.Drawing.Image)(resources.GetObject("N.Image")));
             this.N.ImageHover = ((System.Drawing.Image)(resources.GetObject("N.ImageHover")));
             this.N.ImageNormal = ((System.Drawing.Image)(resources.GetObject("N.ImageNormal")));
@@ -785,6 +724,7 @@
             // 
             // M
             // 
+            this.M.Cursor = System.Windows.Forms.Cursors.Hand;
             this.M.Image = ((System.Drawing.Image)(resources.GetObject("M.Image")));
             this.M.ImageHover = ((System.Drawing.Image)(resources.GetObject("M.ImageHover")));
             this.M.ImageNormal = ((System.Drawing.Image)(resources.GetObject("M.ImageNormal")));
@@ -798,6 +738,7 @@
             // 
             // L
             // 
+            this.L.Cursor = System.Windows.Forms.Cursors.Hand;
             this.L.Image = ((System.Drawing.Image)(resources.GetObject("L.Image")));
             this.L.ImageHover = ((System.Drawing.Image)(resources.GetObject("L.ImageHover")));
             this.L.ImageNormal = ((System.Drawing.Image)(resources.GetObject("L.ImageNormal")));
@@ -811,6 +752,7 @@
             // 
             // K
             // 
+            this.K.Cursor = System.Windows.Forms.Cursors.Hand;
             this.K.Image = ((System.Drawing.Image)(resources.GetObject("K.Image")));
             this.K.ImageHover = ((System.Drawing.Image)(resources.GetObject("K.ImageHover")));
             this.K.ImageNormal = ((System.Drawing.Image)(resources.GetObject("K.ImageNormal")));
@@ -824,6 +766,7 @@
             // 
             // J
             // 
+            this.J.Cursor = System.Windows.Forms.Cursors.Hand;
             this.J.Image = ((System.Drawing.Image)(resources.GetObject("J.Image")));
             this.J.ImageHover = ((System.Drawing.Image)(resources.GetObject("J.ImageHover")));
             this.J.ImageNormal = ((System.Drawing.Image)(resources.GetObject("J.ImageNormal")));
@@ -837,6 +780,7 @@
             // 
             // II
             // 
+            this.II.Cursor = System.Windows.Forms.Cursors.Hand;
             this.II.Image = ((System.Drawing.Image)(resources.GetObject("II.Image")));
             this.II.ImageHover = ((System.Drawing.Image)(resources.GetObject("II.ImageHover")));
             this.II.ImageNormal = ((System.Drawing.Image)(resources.GetObject("II.ImageNormal")));
@@ -850,6 +794,7 @@
             // 
             // H
             // 
+            this.H.Cursor = System.Windows.Forms.Cursors.Hand;
             this.H.Image = ((System.Drawing.Image)(resources.GetObject("H.Image")));
             this.H.ImageHover = ((System.Drawing.Image)(resources.GetObject("H.ImageHover")));
             this.H.ImageNormal = ((System.Drawing.Image)(resources.GetObject("H.ImageNormal")));
@@ -863,6 +808,7 @@
             // 
             // GG
             // 
+            this.GG.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GG.Image = ((System.Drawing.Image)(resources.GetObject("GG.Image")));
             this.GG.ImageHover = ((System.Drawing.Image)(resources.GetObject("GG.ImageHover")));
             this.GG.ImageNormal = ((System.Drawing.Image)(resources.GetObject("GG.ImageNormal")));
@@ -876,6 +822,7 @@
             // 
             // F
             // 
+            this.F.Cursor = System.Windows.Forms.Cursors.Hand;
             this.F.Image = ((System.Drawing.Image)(resources.GetObject("F.Image")));
             this.F.ImageHover = ((System.Drawing.Image)(resources.GetObject("F.ImageHover")));
             this.F.ImageNormal = ((System.Drawing.Image)(resources.GetObject("F.ImageNormal")));
@@ -889,6 +836,7 @@
             // 
             // E
             // 
+            this.E.Cursor = System.Windows.Forms.Cursors.Hand;
             this.E.Image = ((System.Drawing.Image)(resources.GetObject("E.Image")));
             this.E.ImageHover = ((System.Drawing.Image)(resources.GetObject("E.ImageHover")));
             this.E.ImageNormal = ((System.Drawing.Image)(resources.GetObject("E.ImageNormal")));
@@ -902,6 +850,7 @@
             // 
             // D
             // 
+            this.D.Cursor = System.Windows.Forms.Cursors.Hand;
             this.D.Image = ((System.Drawing.Image)(resources.GetObject("D.Image")));
             this.D.ImageHover = ((System.Drawing.Image)(resources.GetObject("D.ImageHover")));
             this.D.ImageNormal = ((System.Drawing.Image)(resources.GetObject("D.ImageNormal")));
@@ -915,6 +864,7 @@
             // 
             // C
             // 
+            this.C.Cursor = System.Windows.Forms.Cursors.Hand;
             this.C.Image = ((System.Drawing.Image)(resources.GetObject("C.Image")));
             this.C.ImageHover = ((System.Drawing.Image)(resources.GetObject("C.ImageHover")));
             this.C.ImageNormal = ((System.Drawing.Image)(resources.GetObject("C.ImageNormal")));
@@ -928,6 +878,7 @@
             // 
             // B
             // 
+            this.B.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B.Image = ((System.Drawing.Image)(resources.GetObject("B.Image")));
             this.B.ImageHover = ((System.Drawing.Image)(resources.GetObject("B.ImageHover")));
             this.B.ImageNormal = ((System.Drawing.Image)(resources.GetObject("B.ImageNormal")));
@@ -941,6 +892,7 @@
             // 
             // A
             // 
+            this.A.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A.Image = ((System.Drawing.Image)(resources.GetObject("A.Image")));
             this.A.ImageHover = ((System.Drawing.Image)(resources.GetObject("A.ImageHover")));
             this.A.ImageNormal = ((System.Drawing.Image)(resources.GetObject("A.ImageNormal")));
@@ -954,6 +906,9 @@
             // 
             // Quit_btn
             // 
+            this.Quit_btn.BackColor = System.Drawing.Color.Transparent;
+            this.Quit_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Quit_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Quit_btn.Image = ((System.Drawing.Image)(resources.GetObject("Quit_btn.Image")));
             this.Quit_btn.ImageHover = ((System.Drawing.Image)(resources.GetObject("Quit_btn.ImageHover")));
             this.Quit_btn.ImageNormal = ((System.Drawing.Image)(resources.GetObject("Quit_btn.ImageNormal")));
@@ -965,32 +920,146 @@
             this.Quit_btn.TabStop = false;
             this.Quit_btn.Click += new System.EventHandler(this.Quit_btn_Click);
             // 
+            // KA3DA
+            // 
+            this.KA3DA.BackColor = System.Drawing.Color.SaddleBrown;
+            this.KA3DA.Location = new System.Drawing.Point(401, 355);
+            this.KA3DA.Name = "KA3DA";
+            this.KA3DA.Size = new System.Drawing.Size(81, 19);
+            this.KA3DA.TabIndex = 24;
+            this.KA3DA.TabStop = false;
+            // 
+            // masn2a
+            // 
+            this.masn2a.BackColor = System.Drawing.Color.Transparent;
+            this.masn2a.Image = ((System.Drawing.Image)(resources.GetObject("masn2a.Image")));
+            this.masn2a.Location = new System.Drawing.Point(431, 168);
+            this.masn2a.Name = "masn2a";
+            this.masn2a.Size = new System.Drawing.Size(148, 194);
+            this.masn2a.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.masn2a.TabIndex = 24;
+            this.masn2a.TabStop = false;
+            // 
+            // Habl
+            // 
+            this.Habl.BackColor = System.Drawing.Color.Transparent;
+            this.Habl.Image = ((System.Drawing.Image)(resources.GetObject("Habl.Image")));
+            this.Habl.Location = new System.Drawing.Point(540, 175);
+            this.Habl.Name = "Habl";
+            this.Habl.Size = new System.Drawing.Size(26, 65);
+            this.Habl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Habl.TabIndex = 24;
+            this.Habl.TabStop = false;
+            // 
+            // ra2s
+            // 
+            this.ra2s.BackColor = System.Drawing.Color.Transparent;
+            this.ra2s.Image = ((System.Drawing.Image)(resources.GetObject("ra2s.Image")));
+            this.ra2s.Location = new System.Drawing.Point(540, 200);
+            this.ra2s.Name = "ra2s";
+            this.ra2s.Size = new System.Drawing.Size(34, 39);
+            this.ra2s.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ra2s.TabIndex = 24;
+            this.ra2s.TabStop = false;
+            // 
+            // gesm
+            // 
+            this.gesm.BackColor = System.Drawing.Color.Transparent;
+            this.gesm.Image = ((System.Drawing.Image)(resources.GetObject("gesm.Image")));
+            this.gesm.Location = new System.Drawing.Point(550, 227);
+            this.gesm.Name = "gesm";
+            this.gesm.Size = new System.Drawing.Size(10, 86);
+            this.gesm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gesm.TabIndex = 24;
+            this.gesm.TabStop = false;
+            // 
+            // Eed_ymeen
+            // 
+            this.Eed_ymeen.BackColor = System.Drawing.Color.Transparent;
+            this.Eed_ymeen.Image = ((System.Drawing.Image)(resources.GetObject("Eed_ymeen.Image")));
+            this.Eed_ymeen.Location = new System.Drawing.Point(555, 242);
+            this.Eed_ymeen.Name = "Eed_ymeen";
+            this.Eed_ymeen.Size = new System.Drawing.Size(22, 39);
+            this.Eed_ymeen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Eed_ymeen.TabIndex = 24;
+            this.Eed_ymeen.TabStop = false;
+            // 
+            // Eed_shemal
+            // 
+            this.Eed_shemal.BackColor = System.Drawing.Color.Transparent;
+            this.Eed_shemal.Image = ((System.Drawing.Image)(resources.GetObject("Eed_shemal.Image")));
+            this.Eed_shemal.Location = new System.Drawing.Point(530, 241);
+            this.Eed_shemal.Name = "Eed_shemal";
+            this.Eed_shemal.Size = new System.Drawing.Size(22, 39);
+            this.Eed_shemal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Eed_shemal.TabIndex = 24;
+            this.Eed_shemal.TabStop = false;
+            // 
+            // regl_shemal
+            // 
+            this.regl_shemal.BackColor = System.Drawing.Color.Transparent;
+            this.regl_shemal.Image = ((System.Drawing.Image)(resources.GetObject("regl_shemal.Image")));
+            this.regl_shemal.Location = new System.Drawing.Point(538, 301);
+            this.regl_shemal.Name = "regl_shemal";
+            this.regl_shemal.Size = new System.Drawing.Size(14, 66);
+            this.regl_shemal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.regl_shemal.TabIndex = 24;
+            this.regl_shemal.TabStop = false;
+            // 
+            // regl_ymeen
+            // 
+            this.regl_ymeen.BackColor = System.Drawing.Color.Transparent;
+            this.regl_ymeen.Image = ((System.Drawing.Image)(resources.GetObject("regl_ymeen.Image")));
+            this.regl_ymeen.Location = new System.Drawing.Point(558, 301);
+            this.regl_ymeen.Name = "regl_ymeen";
+            this.regl_ymeen.Size = new System.Drawing.Size(14, 66);
+            this.regl_ymeen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.regl_ymeen.TabIndex = 24;
+            this.regl_ymeen.TabStop = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel1.Controls.Add(this.def_txt);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(95, 20);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(440, 49);
+            this.flowLayoutPanel1.TabIndex = 25;
+            // 
             // Game_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightYellow;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(691, 480);
             this.Controls.Add(this.GamingOptions_panel);
+            this.Controls.Add(this.regl_shemal);
+            this.Controls.Add(this.regl_ymeen);
+            this.Controls.Add(this.ra2s);
+            this.Controls.Add(this.gesm);
+            this.Controls.Add(this.Eed_ymeen);
+            this.Controls.Add(this.KA3DA);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Quit_btn);
             this.Controls.Add(this.your_score_lbl);
             this.Controls.Add(this.Word_lbl);
-            this.Controls.Add(this.def_txt);
-            this.Controls.Add(this.masn2a);
             this.Controls.Add(this.your_trials_lbl);
             this.Controls.Add(this.score_lbl);
             this.Controls.Add(this.trials_lbl);
             this.Controls.Add(this.hint_txt);
             this.Controls.Add(this.Category_lbltxt);
             this.Controls.Add(this.Category_lblgame);
+            this.Controls.Add(this.Eed_shemal);
+            this.Controls.Add(this.Habl);
+            this.Controls.Add(this.masn2a);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Name = "Game_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
-         //   this.Resize += new System.EventHandler(this.Game_Form_Resize);
-            this.masn2a.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.Game_Form_Load);
             this.GamingOptions_panel.ResumeLayout(false);
             this.GamingOptions_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.easy_arow_R)).EndInit();
@@ -1035,22 +1104,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.B)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.A)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Quit_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KA3DA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masn2a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Habl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ra2s)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gesm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Eed_ymeen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Eed_shemal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.regl_shemal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.regl_ymeen)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel masn2a;
+
         private System.Windows.Forms.Label def_txt;
         private System.Windows.Forms.Label hint_txt;
         private System.Windows.Forms.Label Word_lbl;
-        private System.Windows.Forms.Panel regl_shemal;
-        private System.Windows.Forms.Panel Eed_shemal;
-        private System.Windows.Forms.Panel regl_ymeen;
-        private System.Windows.Forms.Panel Eed_ymeen;
-        private System.Windows.Forms.Panel gesm;
-        private System.Windows.Forms.Panel ra2s;
         private System.Windows.Forms.Panel GamingOptions_panel;
         private System.Windows.Forms.ComboBox Category_cb;
         private System.Windows.Forms.Label label3;
@@ -1104,8 +1178,16 @@
         private CustomImageButton.ImageButtonCustom B;
         private CustomImageButton.ImageButtonCustom A;
         private CustomImageButton.ImageButtonCustom GG;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox KA3DA;
+        private System.Windows.Forms.PictureBox masn2a;
+        private System.Windows.Forms.PictureBox Habl;
+        private System.Windows.Forms.PictureBox ra2s;
+        private System.Windows.Forms.PictureBox gesm;
+        private System.Windows.Forms.PictureBox Eed_ymeen;
+        private System.Windows.Forms.PictureBox Eed_shemal;
+        private System.Windows.Forms.PictureBox regl_shemal;
+        private System.Windows.Forms.PictureBox regl_ymeen;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 
     }
 }

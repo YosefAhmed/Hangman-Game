@@ -77,8 +77,16 @@ E:\projects\Hangman\Hangman\Hangman\bin\Debug\Hangman.exe
 E:\projects\Hangman\Hangman\Hangman\bin\Debug\Hangman.pdb
 E:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.Game_Form.resources
 E:\projects\Hangman\Hangman\Hangman\obj\Debug\CustomImageButton.ImageButtonCustom.resources
-E:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.Keyboard.resources
 E:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.Properties.Resources.resources
 E:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
 E:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.pdb
 E:\projects\Hangman\Hangman\Hangman\obj\Debug\Hangman.csprojResolveAssemblyReference.cache
+C:\Users\user\Downloads\Hangman-Game-master\Hangman\bin\Debug\Hangman.exe.config
+C:\Users\user\Downloads\Hangman-Game-master\Hangman\obj\Debug\Hangman.exe
+C:\Users\user\Downloads\Hangman-Game-master\Hangman\obj\Debug\Hangman.pdb
+C:\Users\user\Downloads\Hangman-Game-master\Hangman\bin\Debug\Hangman.exe
+C:\Users\user\Downloads\Hangman-Game-master\Hangman\bin\Debug\Hangman.pdb
+C:\Users\user\Downloads\Hangman-Game-master\Hangman\obj\Debug\Hangman.Game_Form.resources
+C:\Users\user\Downloads\Hangman-Game-master\Hangman\obj\Debug\CustomImageButton.ImageButtonCustom.resources
+C:\Users\user\Downloads\Hangman-Game-master\Hangman\obj\Debug\Hangman.Properties.Resources.resources
+C:\Users\user\Downloads\Hangman-Game-master\Hangman\obj\Debug\Hangman.csproj.GenerateResource.Cache
