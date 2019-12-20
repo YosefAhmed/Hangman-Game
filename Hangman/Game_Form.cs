@@ -63,6 +63,9 @@ namespace Hangman
         private void resetControls() //resets controls in GamingOptions_panel when quit button is pressed
         {
             Game.score = 0;
+            g.category = "History";
+            g.game_mode = "Medium";
+            g.words_mode = "Random";
             score_lbl.Text = Game.score.ToString();
             hide_arrows();
             arw1.Show(); arw2.Hide(); arw3.Hide(); arw4.Hide(); arw5.Hide(); arw6.Hide();
@@ -129,6 +132,10 @@ namespace Hangman
         private void hint_txt_Click(object sender, EventArgs e)
         {
             hint_txt.Text = gd.hint;
+            show_img(g.trials);
+            g.trials--;
+            trials_lbl.Text = g.trials.ToString();
+            
         }
         private void next_word()
         {
